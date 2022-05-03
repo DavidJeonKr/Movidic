@@ -13,3 +13,5 @@
 1651581319164	Rename type 'User'
 1651585613929	Rename package 'com.variable.movidic.mapper'
 1651585618637	Rename package 'com.variable.movidic.service'
+1651588366381	Rename resource 'userMapper.xml'
+1651589277987	Rename package 'com.variable.movidic.vo'

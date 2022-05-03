@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.variable.movidic.domain.UserVO;
 import com.variable.movidic.user.service.UserService;
-import com.variable.movidic.vo.UserVO;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -23,10 +24,13 @@ public class UserController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public UserVO register() {
-		
-		return null;
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String register(UserVO vo,RedirectAttributes red) {
+		System.out.println(vo);
+		int result=userService.userRegister(vo);
+		System.out.println(result);
+		red.addFlashAttribute("msg","회원가입이 성공하였습니다." );
+		return "redirect:/user/login";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -42,5 +46,7 @@ public class UserController {
 		
 		return "user/signup";
 	}
+	
+	
 
 }

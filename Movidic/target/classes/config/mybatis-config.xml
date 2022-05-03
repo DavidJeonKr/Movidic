@@ -4,4 +4,7 @@
 
 <configuration>
 	
+	<typeAliases>
+		<typeAlias type="com.variable.movidic.domain.UserVO" alias="UserVO"/>
+	</typeAliases>
 </configuration>

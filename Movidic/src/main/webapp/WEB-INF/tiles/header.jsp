@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html">
+                        <a href="${pageContext.request.contextPath }/">
                             <img src="${pageContext.request.contextPath }/resources/img/logo.png" alt="">
                         </a>
                     </div>

@@ -1,5 +1,8 @@
 package com.variable.movidic.user.mapper;
 
+import com.variable.movidic.domain.UserVO;
+
 public interface UserMapper {
 
+	public int userRegister(UserVO vo);
 }

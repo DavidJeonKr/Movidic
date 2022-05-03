@@ -43,7 +43,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="/user/userSignup" method="POST">
+                        <form action="register" method="POST">
                             <div class="input__item">
                                 <input type="text" placeholder="Email address" name="email">
                                 <span class="icon_mail"></span>
@@ -77,7 +77,7 @@
     </section>
     <!-- Signup Section End -->
 
-   
+   	
 
       <!-- Search model Begin -->
       <div class="search-model">

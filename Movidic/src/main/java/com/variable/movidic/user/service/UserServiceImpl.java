@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.variable.movidic.domain.UserVO;
 import com.variable.movidic.user.mapper.UserMapper;
 
 @Service("userService")
@@ -14,6 +15,13 @@ public class UserServiceImpl implements UserService {
 	private UserMapper userMapper;
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
+	@Override
+	public int userRegister(UserVO vo) {
+			
+		int result=userMapper.userRegister(vo);
+		return result;
+	}
 	
 	
 

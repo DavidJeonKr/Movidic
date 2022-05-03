@@ -98,7 +98,14 @@
     </div>
     <!-- Search model end -->
 
-
+		<script>
+    	var msg = "${msg}";
+    	console.log(msg);
+    	if( msg != "") {
+    		alert(msg);
+    	}
+    	
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 package com.variable.movidic.user.service;
 
-import com.variable.movidic.vo.UserVO;
+import com.variable.movidic.domain.UserVO;
 
 public interface UserService {
 
-	
+	public int userRegister(UserVO vo);
 	
 }
