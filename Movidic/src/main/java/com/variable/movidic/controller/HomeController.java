@@ -32,7 +32,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		
+		logger.info("메인 페이지");
 		return "home";
 	}
 	
@@ -44,7 +44,10 @@ public class HomeController {
 	
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detail() {
+		logger.info("디테일 페이지");
 		return "/movie/detail";
 	}
+	
+	
 	
 }
