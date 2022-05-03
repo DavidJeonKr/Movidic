@@ -1,9 +1,9 @@
 package com.variable.movidic.service;
 
-import com.variable.movidic.vo.User;
+import com.variable.movidic.vo.UserVO;
 
 public interface UserService {
 
 	
-	User test(User user);
+	
 }
