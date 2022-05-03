@@ -45,15 +45,15 @@
                         <h3>Sign Up</h3>
                         <form action="/user/userSignup" method="POST">
                             <div class="input__item">
-                                <input type="text" placeholder="Email address" name="email">
+                                <input type="text" placeholder="Email address">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Name" name="name">
+                                <input type="text" placeholder="Your Name">
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Password" name="pw">
+                                <input type="text" placeholder="Password">
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>

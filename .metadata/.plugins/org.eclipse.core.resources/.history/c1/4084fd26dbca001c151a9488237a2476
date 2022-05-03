@@ -17,7 +17,17 @@
 	<!-- 위에 선언된 타일즈템플릿을 상속 -->
 	<!-- name속성은 controller에서 연결할 이름 -->
 
+	<!-- user화면 템플릿 -->
+	<definition name="templateHeader"
+		template="/WEB-INF/tiles/templateHeader.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="body" value="" />
 
+		<put-attribute name="footer"
+			value="/WEB-INF/tiles/footer.jsp" />
+
+	</definition>
 
 	<definition name="user/*" extends="templateHeader">
 		<put-attribute name="body"
@@ -48,14 +58,10 @@
 			value="/WEB-INF/views/{1}.jsp" />
 	</definition>
 
-	<definition name="*/*" extends="templateBasic">
-		<put-attribute name="body"
-			value="/WEB-INF/views/{1}/{2}.jsp" />
-	</definition>
-	<definition name="*/*/*" extends="templateBasic">
-		<put-attribute name="body"
-			value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
-	</definition>
+	<!-- <definition name="*/*" extends="templateBasic"> <put-attribute name="body" 
+		value="/WEB-INF/views/{1}/{2}.jsp" /> </definition> <definition name="*/*/*" 
+		extends="templateBasic"> <put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" 
+		/> </definition> -->
 
 
 
