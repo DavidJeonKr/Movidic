@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.variable.movidic.service.UserService;
+import com.variable.movidic.user.service.UserService;
 import com.variable.movidic.vo.UserVO;
 
 @Controller
@@ -33,14 +33,14 @@ public class UserController {
 	public String signIn() {
 		logger.info("signIn() GET CALL");
 		
-		return "/user/login";
+		return "user/login";
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signUp() {
 		logger.info("signIn() GET CALL");
 		
-		return "/user/signup";
+		return "user/signup";
 	}
 
 }

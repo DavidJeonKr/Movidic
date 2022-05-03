@@ -59,7 +59,7 @@
                 <div class="col-lg-6">
                     <div class="login__register">
                         <h3>Dont’t Have An Account?</h3>
-                        <a href="#" class="primary-btn">Register Now</a>
+                        <a href="../user/signup" class="primary-btn">Register Now</a>
                     </div>
                 </div>
             </div>
