@@ -36,4 +36,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/watch", method=RequestMethod.GET )
+	public String watch() {
+		
+		return "/movie/watch";
+	}
+	
 }
