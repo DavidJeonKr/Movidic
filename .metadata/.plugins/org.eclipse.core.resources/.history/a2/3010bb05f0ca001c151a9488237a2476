@@ -1,8 +1,0 @@
-package com.variable.movidic.user.mapper;
-
-import com.variable.movidic.vo.UserVO;
-
-public interface UserMapper {
-
-	public int userRegister(UserVO vo);
-}

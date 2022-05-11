@@ -1,0 +1,5 @@
+package com.variable.movidic.domain;
+
+public class ProductVO {
+
+}

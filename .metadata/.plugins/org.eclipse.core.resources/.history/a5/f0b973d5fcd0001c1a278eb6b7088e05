@@ -1,0 +1,20 @@
+package com.variable.movidic.domain;
+
+public class MovieVO {
+
+	private int mno;
+	private String title;
+	
+	private String summary;
+	private String genre;
+	private String duration;
+	private String film_ration;
+	private String openData;
+	private String image;
+	
+
+	public MovieVO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

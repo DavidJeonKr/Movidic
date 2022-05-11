@@ -1,0 +1,10 @@
+package com.variable.movidic.user.service;
+
+import com.variable.movidic.domain.UserVO;
+
+public interface UserService {
+
+	public int userRegister(UserVO vo);
+	public int loginCheck(UserVO vo);
+	
+}

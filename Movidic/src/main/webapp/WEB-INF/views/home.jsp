@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -9,7 +11,7 @@
 <meta name="keywords" content="Anime, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Anime | Template</title>
+<title>Movidic</title>
 
 
 </head>
@@ -28,7 +30,7 @@
 		<div class="container">
 			<div class="hero__slider owl-carousel">
 				<div class="hero__items set-bg"
-					data-setbg="${pageContext.request.contextPath }/resources/img/hero/hero-1.jpg">
+					data-setbg="${pageContext.request.contextPath }/resources/img/slider/hero-1.jpg">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
@@ -42,13 +44,15 @@
 					</div>
 				</div>
 				<div class="hero__items set-bg"
-					data-setbg="${pageContext.request.contextPath }/resources/img/hero/hero-1.jpg">
+					data-setbg="${pageContext.request.contextPath }/resources/img/slider/slider1.jpg">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
-								<div class="label">Adventure</div>
-								<h2>Fate / Stay Night: Unlimited Blade Works</h2>
-								<p>After 30 days of travel across the world...</p>
+								<div class="label">스릴러, 전쟁, 사극</div>
+								<h2>명량</h2>
+								<p>2014년[2]에 개봉한, 이순신 장군의 명량 해전을 다룬 한국 영화이다. 감독은《최종병기 활》을
+									연출한 김한민. 원작은 박은우의 소설《명량》이며, 개봉 전 영화를 소설로 옮겨 각본 전철홍, 김한민, 지은이
+									김호경의《명량》이 출판되었다.</p>
 								<a href="#"><span>Watch Now</span> <i
 									class="fa fa-angle-right"></i></a>
 							</div>
@@ -95,32 +99,34 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-1.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
+								<a href="${pageContext.request.contextPath }/movie/detail">
+									<div class="product__item">
+										<div class="product__item__pic set-bg"
+											data-setbg="${pageContext.request.contextPath }/resources/img/test/doctor.jpg">
+											<div class="ep">18 / 18</div>
+											<div class="comment">
+												<i class="fa fa-comments"></i> 11
+											</div>
+											<div class="view">
+												<i class="fa fa-eye"></i> 9141
+											</div>
 										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
+										<div class="product__item__text">
+											<ul>
+												<li>Active</li>
+												<li>Movie</li>
+											</ul>
+											<h5>
+												<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
+											</h5>
 										</div>
 									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-										</h5>
-									</div>
-								</div>
+								</a>
 							</div>
 							<div class="col-lg-4 col-md-6 col-sm-6">
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-2.jpg">
+										data-setbg="${pageContext.request.contextPath }/resources/img/test/myoung.jpg">
 										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
@@ -546,162 +552,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="live__product">
-						<div class="row">
-							<div class="col-lg-8 col-md-8 col-sm-8">
-								<div class="section-title">
-									<h4>Live Action</h4>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-4">
-								<div class="btn__all">
-									<a href="#" class="primary-btn">View All <span
-										class="arrow_right"></span></a>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-1.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Shouwa Genroku Rakugo Shinjuu</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-2.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Mushishi Zoku Shou 2nd Season</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-3.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-4.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-5.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Fate/stay night Movie: Heaven's Feel - II.
-												Lost</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/live/live-6.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Kizumonogatari II: Nekketsu-hen</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-8">
 					<div class="product__sidebar">
@@ -858,4 +709,11 @@
 
 </body>
 
+<script>
+	var msg = "${msg}";
+	console.log(msg);
+	if (msg != "") {
+		alert(msg);
+	}
+</script>
 </html>

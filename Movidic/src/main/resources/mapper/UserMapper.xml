@@ -8,4 +8,8 @@
   	<insert id="userRegister" parameterType="UserVO">
   		insert into users(email,name,pw) values (#{email}, #{name}, #{pw})
   	</insert>
+  	
+  	<select id="loginCheck"  resultType="UserVO">
+  		select * from users where email =#{email} and pw=#{pw}
+  	</select>
   </mapper>

@@ -1,10 +1,13 @@
 package com.variable.movidic.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,9 +31,14 @@ public class UserController {
 	public String register(UserVO vo,RedirectAttributes red) {
 		System.out.println(vo);
 		int result=userService.userRegister(vo);
-		System.out.println(result);
-		red.addFlashAttribute("msg","회원가입이 성공하였습니다." );
-		return "redirect:/user/login";
+		
+		if(result==1) {
+			red.addFlashAttribute("msg","회원가입이 성공하였습니다." );			
+			return "redirect:/user/login";
+		}else {
+			red.addFlashAttribute("msg", "회원가입이 실패했습니다.");
+			return "redirect:/user/signup";
+		}
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -47,6 +55,22 @@ public class UserController {
 		return "user/signup";
 	}
 	
+	@RequestMapping(value="/loginCheck", method= RequestMethod.POST)
+	public String loginCheck(UserVO vo, HttpSession session, Model model, RedirectAttributes red) {
+		
+		UserVO userVO = userService.loginCheck(vo);
+		System.out.println(userVO);
+		
+		if(userVO!=null) {
+			session.setAttribute("userVO", userVO);
+			red.addFlashAttribute("msg", "로그인에 성공했습니다.");
+			return "redirect:/";
+		}else {
+			model.addAttribute("msg", "아이디 또는 비밀번호가 틀렸습니다.");
+			return "user/login";
+		}
+		
+	}
 	
 
 }

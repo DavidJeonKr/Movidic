@@ -22,6 +22,14 @@ public class UserServiceImpl implements UserService {
 		int result=userMapper.userRegister(vo);
 		return result;
 	}
+
+	@Override
+	public UserVO loginCheck(UserVO vo) {
+		// TODO Auto-generated method stub
+		
+		UserVO result=userMapper.loginCheck(vo);
+		return result;
+	}
 	
 	
 
