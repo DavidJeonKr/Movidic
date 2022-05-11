@@ -55,6 +55,7 @@ public class UserController {
 		return "user/signup";
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping(value="/loginCheck", method= RequestMethod.POST)
 	public String loginCheck(UserVO vo, HttpSession session, Model model, RedirectAttributes red) {
 		
@@ -71,6 +72,10 @@ public class UserController {
 		}
 		
 	}
+=======
+	//테스트
+	
+>>>>>>> cb1f507f6cf412126a29752917a15e7aabe22471
 	
 
 }
