@@ -1,0 +1,5 @@
+
+5월 12, 2022 13:08:52.553 NEW SESSION
+5월 12, 2022 13:08:52.553 [44364:53052:0512/130852.551:ERROR:device_event_log_impl.cc(214)] [13:08:52.551] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 12, 2022 13:09:49.547 [44364:58740:0512/130949.547:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 12, 2022 13:20:30.331 [44364:53052:0512/132030.331:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).

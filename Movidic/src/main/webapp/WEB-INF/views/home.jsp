@@ -97,148 +97,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<a href="${pageContext.request.contextPath }/movie/detail">
-									<div class="product__item">
-										<div class="product__item__pic set-bg"
-											data-setbg="${pageContext.request.contextPath }/resources/img/test/doctor.jpg">
-											<div class="ep">18 / 18</div>
-											<div class="comment">
-												<i class="fa fa-comments"></i> 11
-											</div>
-											<div class="view">
-												<i class="fa fa-eye"></i> 9141
-											</div>
-										</div>
-										<div class="product__item__text">
-											<ul>
-												<li>Active</li>
-												<li>Movie</li>
-											</ul>
-											<h5>
-												<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-											</h5>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/test/myoung.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo
-												Eien</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-3.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Shingeki no Kyojin Season 3 Part 2</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-4.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Fullmetal Alchemist: Brotherhood</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-5.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Shiratorizawa Gakuen Koukou</a>
-										</h5>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/trending/trend-6.jpg">
-										<div class="ep">18 / 18</div>
-										<div class="comment">
-											<i class="fa fa-comments"></i> 11
-										</div>
-										<div class="view">
-											<i class="fa fa-eye"></i> 9141
-										</div>
-									</div>
-									<div class="product__item__text">
-										<ul>
-											<li>Active</li>
-											<li>Movie</li>
-										</ul>
-										<h5>
-											<a href="#">Code Geass: Hangyaku no Lelouch R2</a>
-										</h5>
-									</div>
-								</div>
-							</div>
+						<div class="row rank_movies">
+							
 						</div>
 					</div>
 					<div class="popular__product">
@@ -259,7 +119,7 @@
 							<div class="col-lg-4 col-md-6 col-sm-6">
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
-										data-setbg="${pageContext.request.contextPath }/resources/img/popular/popular-1.jpg">
+										data-setbg="https://www.kobis.or.kr/common/mast/movie/2014/07/7e00a486e94f4428b8b2e54313b5c510.jpg">
 										<div class="ep">18 / 18</div>
 										<div class="comment">
 											<i class="fa fa-comments"></i> 11
@@ -708,6 +568,7 @@
 
 
 </body>
+
 
 <script>
 	var msg = "${msg}";

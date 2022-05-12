@@ -1,0 +1,9 @@
+package com.variable.movidic.movie.service;
+
+import java.util.ArrayList;
+
+import com.variable.movidic.domain.MovieVO;
+
+public interface MovieService {
+	public ArrayList<MovieVO> getRankData();
+}

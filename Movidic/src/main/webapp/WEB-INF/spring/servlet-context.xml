@@ -23,7 +23,7 @@
 			</beans:list>
 		</beans:property>
 	</beans:bean>
-	
+
 	<!-- 첫번째로 동작할 타일즈뷰 템플릿선언 -->
 	<beans:bean
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -48,7 +48,8 @@
 
 	<context:component-scan
 		base-package="com.variable.movidic.controller" />
-		<context:component-scan base-package="com.variable.movidic.*.service"/>
+	<context:component-scan
+		base-package="com.variable.movidic.*.service" />
 
 
 

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<!-- Google Font -->
 <link
 	href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
@@ -50,7 +51,8 @@
 	
 	<tiles:insertAttribute name="footer"/>
 	<!-- Js Plugins -->
-<script
+	
+	<script
 	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/bootstrap.min.js"></script>
@@ -64,6 +66,8 @@
 <script
 	src="${pageContext.request.contextPath }/resources/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
+
+<script src="${pageContext.request.contextPath }/resources/js/movieList.js"> </script>
 
 	
 </body>
