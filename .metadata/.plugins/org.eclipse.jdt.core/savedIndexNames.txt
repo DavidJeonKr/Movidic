@@ -63,7 +63,6 @@ INDEX VERSION 1.131+C:\Users\wlsgh\Desktop\ToyProject\SpringToyProject\.metadata
 4094851480.index
 3602017572.index
 2700416423.index
-2754854592.index
 3792921064.index
 39286232.index
 2420158021.index

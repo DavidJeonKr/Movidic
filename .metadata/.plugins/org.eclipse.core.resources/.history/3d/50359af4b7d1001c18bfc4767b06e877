@@ -8,8 +8,4 @@
     	select * from movies limit 6 
     </select>
     
-    <select id="getLatelyData" resultType="MovieVO">
-    	select * from movies order by opendata desc limit 6
-    </select>
-    
   	</mapper>

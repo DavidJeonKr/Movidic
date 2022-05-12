@@ -1,17 +1,12 @@
 $(document).ready(function() {
 
+console.log("시작 안했나");
 	(function(){
 		getRankData()
-		
 	})();
     
-  (function(){
-		getLatelyData()
-		
-	})();
 
 
-})
 
 function getRankData(){
 
@@ -22,7 +17,7 @@ function getRankData(){
 	contentType : "application/json; charset=UTF-8",
 	success : function(data) {
 	console.log(data);
-		enterData(data, "rank_movies");
+		enterData(data);
 	},
 	error : function(error) {
 			console.log(error);
@@ -31,26 +26,10 @@ function getRankData(){
 	})
 };
 
-function getLatelyData(){
-	$.ajax({
-	type:"get",
-	url:"movie/getLatelyData/",
-	dataType: "json",
-	contentType : "application/json; charset=UTF-8",
-	success:function(data){
-
-		enterData(data, "lately_movies");
-	},
-	error:function(error){
-			console.log(error);
-		}
-	})
-};
-
-
-function enterData(data, type){
+}) 
+function enterData(data){
 	var strAdd= "";
-
+	console.log("엔터데이터");
 	
 	$.each(data.list, function(i,el){
 		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
@@ -77,6 +56,5 @@ function enterData(data, type){
 		strAdd+='</a>';
 		strAdd+='</div>';
 		})
-		
-		$("."+type).html(strAdd);
+		$(".rank_movies").html(strAdd);
 }

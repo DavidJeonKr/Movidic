@@ -22,10 +22,4 @@ public class MovieServiceImpl implements MovieService{
 		return movieMapper.getRankData();
 	}
 
-	@Override
-	public ArrayList<MovieVO> getLatelyData() {
-		// TODO Auto-generated method stub
-		return movieMapper.getLatelyData();
-	}
-
 }

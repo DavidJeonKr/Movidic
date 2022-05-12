@@ -7,5 +7,4 @@ import com.variable.movidic.domain.MovieVO;
 public interface MovieMapper {
 
 	public ArrayList<MovieVO> getRankData();
-	public ArrayList<MovieVO> getLatelyData();
 }

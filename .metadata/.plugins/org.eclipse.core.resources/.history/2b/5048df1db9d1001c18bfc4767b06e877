@@ -52,11 +52,8 @@ public class MovieController {
 	@RequestMapping(value="/getLatelyData", method=RequestMethod.GET, produces="application/json")
 	public HashMap<String, Object> getLatelyData(){
 
-		ArrayList<MovieVO> list =movieService.getLatelyData();
 		
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("list", list);
 	
-		return map;
+		return null;
 	}
 }

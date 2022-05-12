@@ -25,7 +25,7 @@ public class MovieServiceImpl implements MovieService{
 	@Override
 	public ArrayList<MovieVO> getLatelyData() {
 		// TODO Auto-generated method stub
-		return movieMapper.getLatelyData();
+		return null;
 	}
 
 }

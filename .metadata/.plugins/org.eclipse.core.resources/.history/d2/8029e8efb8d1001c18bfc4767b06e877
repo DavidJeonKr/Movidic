@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+console.log("시작 안했나");
 	(function(){
 		getRankData()
 		
@@ -38,7 +39,7 @@ function getLatelyData(){
 	dataType: "json",
 	contentType : "application/json; charset=UTF-8",
 	success:function(data){
-
+	console.log("최근 날짜 데이터");
 		enterData(data, "lately_movies");
 	},
 	error:function(error){
@@ -50,7 +51,7 @@ function getLatelyData(){
 
 function enterData(data, type){
 	var strAdd= "";
-
+	console.log("엔터데이터");
 	
 	$.each(data.list, function(i,el){
 		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
