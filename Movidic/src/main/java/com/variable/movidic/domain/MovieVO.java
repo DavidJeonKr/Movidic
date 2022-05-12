@@ -4,7 +4,7 @@ public class MovieVO {
 
 	private int mno;
 	private String title;
-	
+	private int rank;
 	private String summary;
 	private String genre;
 	private String duration;
@@ -12,15 +12,11 @@ public class MovieVO {
 	private String openData;
 	private String image;
 	
-
 	public MovieVO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
-
-	public MovieVO(int mno, String title, String summary, String genre, String duration, String film_ration,
+	public MovieVO(int mno, String title, int rank, String summary, String genre, String duration, String film_ration,
 			String openData, String image) {
 		super();
 		this.mno = mno;
@@ -31,6 +27,14 @@ public class MovieVO {
 		this.film_ration = film_ration;
 		this.openData = openData;
 		this.image = image;
+	}
+	 
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
 	}
 
 

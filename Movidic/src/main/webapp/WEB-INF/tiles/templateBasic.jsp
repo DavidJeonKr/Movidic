@@ -69,6 +69,7 @@
 
 <script src="${pageContext.request.contextPath }/resources/js/movieList.js"> </script>
 
+
 	
 </body>
 </html>

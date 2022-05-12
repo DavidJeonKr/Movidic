@@ -28,8 +28,19 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		
 		UserVO result=userMapper.loginCheck(vo);
+		logger.info("result ------> {} ", result);
 		return result;
 	}
+
+	@Override
+	public int check_email(String email) {
+		
+		
+		int result = userMapper.check_email(email);
+		return result;
+	}
+	
+	
 	
 	
 

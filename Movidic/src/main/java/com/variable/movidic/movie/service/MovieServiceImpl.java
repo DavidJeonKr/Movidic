@@ -27,5 +27,7 @@ public class MovieServiceImpl implements MovieService{
 		// TODO Auto-generated method stub
 		return movieMapper.getLatelyData();
 	}
+	
+	
 
 }

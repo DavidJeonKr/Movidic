@@ -6,6 +6,6 @@ public interface UserMapper {
 
 	public int userRegister(UserVO vo);
 	public UserVO loginCheck(UserVO vo);
-	
+	public int check_email(String email);
 	
 }

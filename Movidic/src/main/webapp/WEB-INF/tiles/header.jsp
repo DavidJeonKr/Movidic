@@ -37,7 +37,18 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile"></span></a>
+                        <!-- 로그인 페이지  -->
+                        <!--  <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile"></span></a> -->
+                        <c:if test="${empty login}">
+                        <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile">로그인</span></a>
+                        </c:if>
+                        <c:if test="${not empty login }">
+                        <!-- TODO: 유저정보 페이지 생성 -->
+                        <a href="${pageContext.request.contextPath}">${login.name}</a>
+                        <!-- 로그인시 -> 로그아웃 -->
+                        
+                        <a href="${pageContext.request.contextPath}/user/logout"><span>로그아웃</span></a>
+                        </c:if>
                     </div>
                 </div>
             </div>

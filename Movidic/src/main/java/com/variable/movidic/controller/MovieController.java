@@ -29,6 +29,7 @@ public class MovieController {
 		return "movie/category";
 	}
 	
+	// mno번호 받기
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detailPage() {
 		return "movie/detail";
@@ -40,7 +41,7 @@ public class MovieController {
 	public HashMap<String, Object> getRankData(){
 		ArrayList<MovieVO> list= movieService.getRankData();
 		System.out.println("랭크데이터");
-		System.out.println(list);
+//		System.out.println(list);
 		HashMap<String, Object> map= new HashMap<>();
 		map.put("list", list);
 		
