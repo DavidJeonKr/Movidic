@@ -11,7 +11,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Anime | Template</title>
 
+
+
 </head>
+
 
 <body>
 	<!-- Page Preloder -->
@@ -44,20 +47,22 @@
 				<div class="col-lg-6">
 					<div class="login__form">
 						<h3>Sign Up</h3>
-						<form action="register" method="POST">
+						<form id="registerForm" action="register" method="POST">
 							<div class="input__item">
-								<input type="text" placeholder="Email address" name="email">
+								<input type="text" id="email" placeholder="Email address" name="email" autofocus="autofocus">
+								
 								<span class="icon_mail"></span>
 							</div>
+							
 							<div class="input__item">
-								<input type="text" placeholder="Your Name" name="name">
+								<input type="text" placeholder="Your Name" name="name" id="name">
 								<span class="icon_profile"></span>
 							</div>
 							<div class="input__item">
-								<input type="password" placeholder="Password" name="pw"> <span
+								<input type="password" placeholder="Password" name="pw" id="pw"> <span
 									class="icon_lock"></span>
 							</div>
-							<button type="submit" class="site-btn">Login Now</button>
+							<button type="submit" class="site-btn">Register</button>
 						</form>
 						<h5>
 							Already have an account? <a href="../user/login">Log In!</a>
@@ -99,5 +104,8 @@
 
 
 </body>
+	<script
+	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath }/resources/js/register.js"> </script>
 
 </html>

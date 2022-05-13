@@ -11,6 +11,10 @@ public class UserVO {
 	private String name;
 	private String pw;
 	private Date regdate;
+	private String profile;
+	private String session_key;
+	private Date session_limit;
+	
 	
 	public UserVO() {
 		// TODO Auto-generated constructor stub
@@ -24,6 +28,43 @@ public class UserVO {
 		this.name = name;
 		this.pw = pw;
 		this.regdate = regdate;
+	}
+
+	
+
+
+	public String getProfile() {
+		return profile;
+	}
+
+
+
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
+
+
+
+	public String getSession_key() {
+		return session_key;
+	}
+
+
+
+	public void setSession_key(String session_key) {
+		this.session_key = session_key;
+	}
+
+
+
+	public Date getSession_limit() {
+		return session_limit;
+	}
+
+
+
+	public void setSession_limit(Date session_limit) {
+		this.session_limit = session_limit;
 	}
 
 

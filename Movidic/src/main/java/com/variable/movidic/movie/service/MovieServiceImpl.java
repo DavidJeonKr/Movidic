@@ -27,6 +27,8 @@ public class MovieServiceImpl implements MovieService{
 		// TODO Auto-generated method stub
 		return movieMapper.getLatelyData();
 	}
+	
+	
 
 	@Override
 	public ArrayList<MovieVO> getCategoryData() {

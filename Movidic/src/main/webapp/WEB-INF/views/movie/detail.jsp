@@ -30,6 +30,7 @@
                     <div class="breadcrumb__links">
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
                         <a href="./categories.html">Categories</a>
+                        <!-- TODO: 장르 받아서 입력--> 
                         <span>Romance</span>
                     </div>
                 </div>
@@ -52,8 +53,7 @@
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3>Fate Stay Night: Unlimited Blade</h3>
-                                <span>フェイト／ステイナイト, Feito／sutei naito</span>
+                                <h3>title 제목 받아</h3>
                             </div>
                             <div class="anime__details__rating">
                                 <div class="rating">
@@ -65,28 +65,21 @@
                                 </div>
                                 <span>1.029 Votes</span>
                             </div>
-                            <p>Every human inhabiting the world of Alcia is branded by a “Count” or a number written on
-                                their body. For Hina’s mother, her total drops to 0 and she’s pulled into the Abyss,
-                                never to be seen again. But her mother’s last words send Hina on a quest to find a
-                            legendary hero from the Waste War - the fabled Ace!</p>
+                            <p>줄거리 입력 받아서</p>
                             <div class="anime__details__widget">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>Type:</span> TV Series</li>
-                                            <li><span>Studios:</span> Lerche</li>
-                                            <li><span>Date aired:</span> Oct 02, 2019 to ?</li>
-                                            <li><span>Status:</span> Airing</li>
-                                            <li><span>Genre:</span> Action, Adventure, Fantasy, Magic</li>
+                                            <li><span>장르:</span> TV Series</li>
+                                            <li><span>상영시간:</span> Lerche</li>
+                                            <li><span>관람등급:</span> Oct 02, 2019 to ?</li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>Scores:</span> 7.31 / 1,515</li>
-                                            <li><span>Rating:</span> 8.5 / 161 times</li>
-                                            <li><span>Duration:</span> 24 min/ep</li>
-                                            <li><span>Quality:</span> HD</li>
-                                            <li><span>Views:</span> 131,541</li>
+                                            <li><span>개봉일:</span> Airing</li>
+                                            <li><span>평점:</span> 7.31 / 1,515</li>
+                                            <li><span>조회수:</span> 8.5 / 161 times</li>
                                         </ul>
                                     </div>
                                 </div>

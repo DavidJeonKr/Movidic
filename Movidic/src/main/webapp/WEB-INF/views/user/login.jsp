@@ -54,8 +54,19 @@
 								<input type="text" placeholder="Password" name="pw"> <span
 									class="icon_lock"></span>
 							</div>
+							<!-- 로그인 유지 -->
+							<div class="form-group">
+<!-- 								<div class="custom-control custom-checkbox small">
+									<label style="color: white;" > <input  type="checkbox" name="useCookie">
+										로그인유지
+									</label>
+								</div> -->
+							</div>
+
 							<button type="submit" class="site-btn">Login Now</button>
 						</form>
+
+
 						<a href="#" class="forget_pass">Forgot Your Password?</a>
 					</div>
 				</div>

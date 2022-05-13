@@ -70,6 +70,7 @@
 <script src="${pageContext.request.contextPath }/resources/js/movieList.js"> </script>
 <script src="${pageContext.request.contextPath }/resources/js/category.js"> </script>
 
+
 	
 </body>
 </html>

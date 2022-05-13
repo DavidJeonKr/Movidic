@@ -29,6 +29,7 @@ public class MovieController {
 		return "movie/category";
 	}
 	
+	// mno번호 받기
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detailPage() {
 		return "movie/detail";
@@ -39,6 +40,11 @@ public class MovieController {
 	@RequestMapping(value="/getRankData", method=RequestMethod.GET, produces="application/json")
 	public HashMap<String, Object> getRankData(){
 		ArrayList<MovieVO> list= movieService.getRankData();
+<<<<<<< HEAD:Movidic/src/main/java/com/variable/movidic/controller/movieController.java
+=======
+		System.out.println("랭크데이터");
+//		System.out.println(list);
+>>>>>>> 5f72b71a1022228bbc213e7f2c583c0f870460e8:Movidic/src/main/java/com/variable/movidic/controller/MovieController.java
 		HashMap<String, Object> map= new HashMap<>();
 		map.put("list", list);
 		
