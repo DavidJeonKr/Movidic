@@ -23,11 +23,17 @@
     	]]>
     </select>
     
-    
     <select id="getTotal" resultType="int">
     	select count(*) as total
     	from movies
     	where genre like concat('%',#{genreName},'%')
     
     </select>
+
+    <select id="read" resultType="MovieVO">
+    	select * from movies where mno = #{mno}
+    	
+    </select>
+
+   
   	</mapper>

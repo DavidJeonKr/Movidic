@@ -52,7 +52,7 @@ function enterData(data, type){
 	$.each(data.list, function(i,el){
 	
 		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
-		strAdd+='<a href="movie/detail?mno' + el.mno + '">';
+		strAdd+='<a href="movie/detail?mno=' + el.mno + '">';
 		strAdd+='<div class="product__item">';
 		strAdd+='<div class="product__item__pic set-bg" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
 		strAdd+='<div class="comment">';

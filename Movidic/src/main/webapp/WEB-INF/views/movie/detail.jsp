@@ -31,7 +31,7 @@
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
                         <a href="./categories.html">Categories</a>
                         <!-- TODO: 장르 받아서 입력--> 
-                        <span>Romance</span>
+                        <span>${movie.genre}</span>
                     </div>
                 </div>
             </div>
@@ -45,15 +45,15 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="anime__details__pic set-bg" data-setbg="${pageContext.request.contextPath }/resources/img/anime/details-pic.jpg">
-                            <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                        <div class="anime__details__pic set-bg"  data-setbg="${movie.image}}">
+                            <div class="comment"><i class="fa fa-comments"></i> 코멘트 /div>
+                            <div class="view"><i class="fa fa-eye"></i> 조회수 </div>
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
-                                <h3>title 제목 받아</h3>
+                                <h3>${movie.title}</h3>
                             </div>
                             <div class="anime__details__rating">
                                 <div class="rating">
@@ -65,19 +65,19 @@
                                 </div>
                                 <span>1.029 Votes</span>
                             </div>
-                            <p>줄거리 입력 받아서</p>
+                            <p>${movie.summary}</p>
                             <div class="anime__details__widget">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>장르:</span> TV Series</li>
-                                            <li><span>상영시간:</span> Lerche</li>
-                                            <li><span>관람등급:</span> Oct 02, 2019 to ?</li>
+                                            <li><span>장르:</span> ${movie.genre}</li>
+                                            <li><span>상영시간:</span> ${movie.duration}</li>
+                                            <li><span>관람등급:</span> ${movie.film_ration}</li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>개봉일:</span> Airing</li>
+                                            <li><span>개봉일:</span> ${movie.openData}</li>
                                             <li><span>평점:</span> 7.31 / 1,515</li>
                                             <li><span>조회수:</span> 8.5 / 161 times</li>
                                         </ul>

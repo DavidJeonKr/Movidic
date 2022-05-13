@@ -3,9 +3,13 @@ package com.variable.movidic.controller;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,7 +23,8 @@ import com.variable.movidic.util.PageVO;
 @Controller
 @RequestMapping("/movie")
 public class MovieController {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
 	
 	@Autowired
 	@Qualifier("movieService")
@@ -34,8 +39,13 @@ public class MovieController {
 	
 	// mno번호 받기
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
-	public String detailPage() {
+	public String detailPage(@RequestParam Integer mno, Model model) {
+		logger.info("detail 페이지");
 		
+		MovieVO movie = movieService.read(mno);
+		logger.info(movie.toString());
+		model.addAttribute("movie", movie);
+
 		
 		return "movie/detail";
 	}
@@ -46,6 +56,8 @@ public class MovieController {
 	public HashMap<String, Object> getRankData(){
 		ArrayList<MovieVO> list= movieService.getRankData();
 
+		System.out.println("랭크데이터");
+//		System.out.println(list);
 		HashMap<String, Object> map= new HashMap<>();
 		map.put("list", list);
 		

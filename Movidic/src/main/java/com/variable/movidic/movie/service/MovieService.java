@@ -10,4 +10,5 @@ public interface MovieService {
 	public ArrayList<MovieVO> getLatelyData();
 	public ArrayList<MovieVO> getCategoryData(Criteria cri);
 	public int getTotal(Criteria cri);
-}
+	public MovieVO read(int mno);
+ }

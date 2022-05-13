@@ -12,4 +12,7 @@ public interface MovieMapper {
 	public ArrayList<MovieVO> getCategoryData(Criteria cri);
 	
 	public int getTotal(Criteria cri);
+	public ArrayList<MovieVO> getCategoryData();
+	MovieVO read(int mno);
+
 }

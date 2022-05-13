@@ -44,4 +44,11 @@ public class MovieServiceImpl implements MovieService{
 		return movieMapper.getTotal(cri);
 	}
 
+	@Override
+	public MovieVO read(int mno) {
+		
+		
+		return movieMapper.read(mno);
+	}
+
 }
