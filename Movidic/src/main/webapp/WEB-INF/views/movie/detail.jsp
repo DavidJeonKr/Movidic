@@ -45,9 +45,15 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
+<<<<<<< Updated upstream
                         <div class="anime__details__pic set-bg"  data-setbg="${movie.image}">
                             <div class="comment"><i class="fa fa-comments"></i> 코멘트 </div>
                             <div class="view"><i class="fa fa-eye"></i> 조회수 </div>
+=======
+                        <div class="anime__details__pic set-bg" data-setbg="${movie.image}">
+                            <div class="comment"><i class="fa fa-comments"></i> 코멘트</div>
+                            <div class="view"><i class="fa fa-eye"></i> 조회수</div>
+>>>>>>> Stashed changes
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -100,72 +106,40 @@
                                 <h5>Reviews</h5>
                             </div>
                             <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-1.jpg" alt="">
-                                </div>
                                 <div class="anime__review__item__text">
-                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                    "demons" LOL</p>
+                                    <h6>사용자 이름(name) - <span>1 Hour ago(regdate)</span></h6>
+                                    <p>댓글 내용(content)</p>
                                 </div>
                             </div>
                             <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-2.jpg" alt="">
-                                </div>
                                 <div class="anime__review__item__text">
                                     <h6>Lewis Mann - <span>5 Hour ago</span></h6>
                                     <p>Finally it came out ages ago</p>
                                 </div>
                             </div>
                             <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-3.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                    <p>Where is the episode 15 ? Slow update! Tch</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-4.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Chris Curry - <span>1 Hour ago</span></h6>
-                                    <p>whachikan Just noticed that someone categorized this as belonging to the genre
-                                    "demons" LOL</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-5.jpg" alt="">
-                                </div>
-                                <div class="anime__review__item__text">
-                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                    <p>Finally it came out ages ago</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__pic">
-                                    <img src="${pageContext.request.contextPath }/resources/img/anime/review-6.jpg" alt="">
-                                </div>
                                 <div class="anime__review__item__text">
                                     <h6>Louis Tyler - <span>20 Hour ago</span></h6>
                                     <p>Where is the episode 15 ? Slow update! Tch</p>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- 댓글 입력 -->
                         <div class="anime__details__form">
                             <div class="section-title">
                                 <h5>Your Comment</h5>
                             </div>
-                            <form action="#">
-                                <textarea placeholder="Your Comment"></textarea>
-                                <button type="submit"><i class="fa fa-location-arrow"></i> Review</button>
-                            </form>
+                            <div>
+                            	<input id="mno" type="hidden" value="${movie.mno}">
+                            	<input id="login_name" type="hidden" value="${login.name}">
+                                <textarea id="content" placeholder="Your Comment">${login.name}</textarea>
+                                <button type="submit" id="submit"><i class="fa fa-location-arrow"></i> Review</button>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- TODO 장르에 맞는 것을 검색 예) -> like 액션 등등  -->
                     <div class="col-lg-4 col-md-4">
                         <div class="anime__details__sidebar">
                             <div class="section-title">
@@ -196,9 +170,11 @@
 
 
     </body>
-    	<script
+
+    
+    <script
 	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
-	<script
-	src="${pageContext.request.contextPath }/resources/js/category.js"></script>
+	<script src="${pageContext.request.contextPath }/resources/js/category.js"></script>
+	<script src="${pageContext.request.contextPath }/resources/js/replies.js"> </script>
 
     </html>

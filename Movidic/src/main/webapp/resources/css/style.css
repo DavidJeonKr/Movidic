@@ -1182,7 +1182,7 @@ ol {
 	margin-bottom: 0;
 }
 
-.anime__details__form form textarea {
+.anime__details__form div textarea {
 	width: 100%;
 	font-size: 15px;
 	color: #b7b7b7;
@@ -1195,7 +1195,7 @@ ol {
 	margin-bottom: 24px;
 }
 
-.anime__details__form form button {
+.anime__details__form div button {
 	font-size: 11px;
 	color: #ffffff;
 	font-weight: 700;

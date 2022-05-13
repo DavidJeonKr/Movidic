@@ -7,5 +7,6 @@
 	<typeAliases>
 		<typeAlias type="com.variable.movidic.domain.UserVO" alias="UserVO"/>
 		<typeAlias type="com.variable.movidic.domain.MovieVO" alias="MovieVO"/>
+		<typeAlias type="com.variable.movidic.domain.ReplieVO" alias="ReplieVO"/>
 	</typeAliases>
 </configuration>

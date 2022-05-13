@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.variable.movidic.replie.mapper.ReplieMapper">
+
+	<insert id="insert">
+		insert into replies(content, writer, mno) values (#{content}, #{writer}, #{mno})
+	</insert>
+	
+	
+	
+	<select id="read_by_mno" parameterType="ReplieVO">
+		select from replies where mnp = #{mno}
+	</select>
+   
+  	</mapper>

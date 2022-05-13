@@ -43,7 +43,7 @@ public class MovieController {
 		logger.info("detail 페이지");
 		
 		MovieVO movie = movieService.read(mno);
-		logger.info(movie.toString());
+		//logger.info(movie.toString());
 		model.addAttribute("movie", movie);
 
 		
