@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.variable.movidic.movie.mapper.MovieMapper">
+    
+    <select id="getRankData" resultType="MovieVO">
+    	select * from movies limit 6 
+    </select>
+    
+    <select id="getLatelyData" resultType="MovieVO">
+    	select * from movies order by opendata desc limit 6
+    </select>
+    
+    <select id="getCategoryData" resultType="MovieVO">
+    select * from 
+	(select @rownum:=@rownum+1 as rn, m.* 
+		from (select * from movies where 1=1
+		  order by mno) m
+          where (@rownum:=0)=0) a 
+        <![CDATA[
+        where rn >(#{pageNum}-1) * #{amount} and rn<= #{pageNum}*#{amount} 
+    	]]>
+    </select>
+    
+    
+    <select id="getTotal" resultType="int">
+    	select count(*) as total
+    	from movies
+    	where genre like concat('%',#{genreName},'%')
+    
+    </select>
+  	</mapper>

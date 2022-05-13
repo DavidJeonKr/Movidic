@@ -55,10 +55,11 @@
 									<div class="product__page__filter">
 										<p>장르 :</p>
 										<select id="genre">
-											<option value="">액션</option>
-											<option value="">로맨스</option>
-											<option value="">드라마</option>
-											<option value="">코믹</option>
+											<option value="액션">액션</option>
+											<option value="사극">사극</option>
+											<option value="드라마">드라마</option>
+											<option value="판타지">판타지</option>
+											<option value="코미디">코미디</option>
 										</select>
 									</div>
 								</div>
@@ -69,11 +70,9 @@
 							
 						</div>
 					</div>
-					<div class="product__pagination">
-						<a href="#" class="current-page">1</a> <a href="#">2</a> <a
-							href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#"><i
-							class="fa fa-angle-double-right"></i></a>
-					</div>
+					<ul class="product__pagination">
+				
+					</ul>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-8">
 					<div class="product__sidebar">
@@ -236,5 +235,8 @@
 	<!-- Search model end -->
 
 </body>
-
+	<script
+	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
+	<script
+	src="${pageContext.request.contextPath }/resources/js/category.js"></script>
 </html>

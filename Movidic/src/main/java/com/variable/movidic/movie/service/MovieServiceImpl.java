@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.variable.movidic.domain.MovieVO;
 import com.variable.movidic.movie.mapper.MovieMapper;
+import com.variable.movidic.util.Criteria;
 
 @Service("movieService")
 public class MovieServiceImpl implements MovieService{
@@ -31,9 +32,16 @@ public class MovieServiceImpl implements MovieService{
 	
 
 	@Override
-	public ArrayList<MovieVO> getCategoryData() {
+	public ArrayList<MovieVO> getCategoryData(Criteria cri) {
 		// TODO Auto-generated method stub
-		return movieMapper.getCategoryData();
+		
+		return movieMapper.getCategoryData(cri);
+	}
+
+	@Override
+	public int getTotal(Criteria cri) {
+		// TODO Auto-generated method stub
+		return movieMapper.getTotal(cri);
 	}
 
 }

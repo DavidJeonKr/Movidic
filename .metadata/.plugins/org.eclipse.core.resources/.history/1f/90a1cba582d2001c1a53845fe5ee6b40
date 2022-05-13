@@ -1,0 +1,82 @@
+$(document).ready(function() {
+
+
+    console.log($(".genre option:selected").val());
+    (function(){
+        getCategoryData(1);
+    })();
+    
+	$(".genre").change(function(){
+		console.log($(this).val());
+	})
+
+    function getCategoryData(pageNum){
+
+
+		var sendData={
+			"pageNum": pageNum
+		}
+    $.ajax({
+        type:'get',
+        url:'getCategoryData/',
+        dataType:"json",
+		data: sendData,
+        contentType : "application/json; charset=UTF-8",
+        success: function(data){
+        
+        console.log(data);
+            enterData(pageNum,data);
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}
+
+function enterData(pageNum, data){
+
+    var strAdd="";
+
+    $.each(data.list, function(i,el){
+		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
+		strAdd+='<a href="movie/detail?mno' + el.mno + '">';
+		strAdd+='<div class="product__item">';
+		strAdd+='<div class="product__item__pic set-bg" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
+		strAdd+='<div class="comment">';
+		strAdd+='<i class="fa fa-comments"></i> 11';
+		strAdd+='</div>';
+		strAdd+='<div class="view">';
+		strAdd+='<i class="fa fa-eye"></i> 9141';
+		strAdd+='</div>';
+		strAdd+='</div>';
+		strAdd+='<div class="product__item__text">';
+		strAdd+='<ul>';
+		strAdd+='<li>Active</li>';
+		strAdd+='<li>Movie</li>';
+		strAdd+='</ul>';
+		strAdd+='<h5>';
+		strAdd+='+el.title+';
+		strAdd+='</h5>';
+		strAdd+='</div>';
+		strAdd+='</div>';
+		strAdd+='</a>';
+		strAdd+='</div>';
+		})
+
+        $(".category_movies").html(strAdd);
+
+		var pageVO=data.pageVO;
+		var pageAdd="";
+		
+		console.log(pageVO);
+		
+		if(pageVO.prev) pageAdd += '<li><a href="" data-pagenum=' + (pageVO.startPage - 1) + '><span class="glyphicon glyphicon-chevron-left"></span></a></li>';
+		for(var i = pageVO.startPage; i < pageVO.endPage + 1; i++ ){
+			pageAdd += '<li class="' + (pageNum == i ? 'active' : '') + '"><a href="" data-pagenum="' + i + '">' + i + '</a></li>';
+		}
+		if(pageVO.next) pageAdd += '<li><a href="" data-pagenum=' + (pageVO.endPage + 1) + '><span class="glyphicon glyphicon-chevron-right"></span></a></li>';
+	
+		$(".product__pagination").html(pageAdd);
+}
+})
+

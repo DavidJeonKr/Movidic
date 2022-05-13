@@ -20,9 +20,6 @@ public class SignedInInterceptor implements HandlerInterceptor{
 	private static final Logger logger = LoggerFactory.getLogger(SignedInInterceptor.class);
 	
 	
-	@Autowired
-	private UserService userservice;
-	
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {

@@ -1,0 +1,25 @@
+package com.variable.movidic.util;
+
+import java.util.List;
+import java.util.Map;
+
+public class Criteria {
+
+	private int pageNum;
+	private int amount;
+	
+	
+	private Map<String, List<String>> checkObj;
+	
+	
+	public Criteria() {
+		this(1, 12);
+	}
+
+
+
+	public Criteria(int pageNum, int amount) {
+		this.pageNum= pageNum;
+		this.amount= amount;
+	}
+}

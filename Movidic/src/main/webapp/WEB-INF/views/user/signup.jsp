@@ -104,7 +104,7 @@
 
 
 </body>
-	<script
+<script
 	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/register.js"> </script>
 

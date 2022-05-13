@@ -1,19 +1,50 @@
 $(document).ready(function() {
 
-    console.log($('#genre').val);
+
+    
     (function(){
-        getCategoryData();
+        getCategoryData(1, "액션");
     })();
     
-    function getCategoryData(){
+	$("#genre").change(function(){
+		event.preventDefault();
+		genreName= $("#genre option:selected").val();
+		console.log(genreName);
+		getCategoryData(1,genreName);
+	})
+	
+	$(".product__pagination").click(function(){
+		event.preventDefault();
+		if(event.target.tagName != 'A') return;
 
+		var pageNum = event.target.dataset.pagenum;
+	
+		console.log(pageNum);		
+		getCategoryData(pageNum, $("#genre option:selected").val());
+		
+		$('html, body').animate({
+			scrollTop : 0
+		}, 400);
+		return false;
+	})
+
+    function getCategoryData(pageNum, genreName){
+
+
+		var sendData={
+			"pageNum": pageNum,
+			"genreName": genreName
+		}
     $.ajax({
         type:'get',
-        url:'movie/getCategoryData/',
+        url:'getCategoryData/',
         dataType:"json",
+		data: sendData,
         contentType : "application/json; charset=UTF-8",
         success: function(data){
-            console.log(data);
+        
+        console.log(data);
+            enterData(pageNum,data);
         },
         error: function(error){
             console.log(error);
@@ -21,7 +52,7 @@ $(document).ready(function() {
     })
 }
 
-function enterData(data){
+function enterData(pageNum, data){
 
     var strAdd="";
 
@@ -53,8 +84,18 @@ function enterData(data){
 
         $(".category_movies").html(strAdd);
 
+		var pageVO=data.pageVO;
+		var pageAdd="";
+		
+		console.log(pageVO);
+		
+		if(pageVO.prev) pageAdd += '<li><a href="" data-pagenum=' + (pageVO.startPage - 1) + '><span class="glyphicon glyphicon-chevron-left"></span></a></li>';
+		for(var i = pageVO.startPage; i < pageVO.endPage + 1; i++ ){
+			pageAdd += '<li class="' + (pageNum == i ? 'active' : '') + '"><a href="" data-pagenum="' + i + '">' + i + '</a></li>';
+		}
+		if(pageVO.next) pageAdd += '<li><a href="" data-pagenum=' + (pageVO.endPage + 1) + '><span class="glyphicon glyphicon-chevron-right"></span></a></li>';
+	
+		$(".product__pagination").html(pageAdd);
 }
-    
-    
 })
 
