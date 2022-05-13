@@ -11,7 +11,6 @@ $(document).ready(function() {
 		genreName= $("#genre option:selected").val();
 		console.log(genreName);
 		getCategoryData(1,genreName);
-		$(".genreTitle").text(genreName);
 	})
 	
 	$(".product__pagination").click(function(){
