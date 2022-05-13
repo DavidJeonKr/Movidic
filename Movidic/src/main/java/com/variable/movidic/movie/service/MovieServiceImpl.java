@@ -51,4 +51,10 @@ public class MovieServiceImpl implements MovieService{
 		return movieMapper.read(mno);
 	}
 
+	@Override
+	public ArrayList<MovieVO> getSidebarData() {
+		// TODO Auto-generated method stub
+		return movieMapper.getSidebarData();
+	}
+
 }

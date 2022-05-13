@@ -99,4 +99,15 @@ public class MovieController {
 		return map;
 	}
 	
+	@ResponseBody
+	@RequestMapping(value="/getSidebarData", method=RequestMethod.GET, produces="application/json")
+	public HashMap<String, Object> getSidebarData(){
+		
+		HashMap<String,Object> map = new HashMap<>();
+		ArrayList<MovieVO> list = movieService.getSidebarData();
+		
+		map.put("list", list);
+		
+		return map;
+	}
 }

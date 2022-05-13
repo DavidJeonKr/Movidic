@@ -46,9 +46,7 @@
 	
 	<!-- 두번째 타일즈 템플릿 조립 -->
 	<tiles:insertAttribute name="header"/>
-	
 	<tiles:insertAttribute name="body"/>
-	
 	<tiles:insertAttribute name="footer"/>
 	<!-- Js Plugins -->
 	

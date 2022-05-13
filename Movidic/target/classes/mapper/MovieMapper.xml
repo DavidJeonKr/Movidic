@@ -34,6 +34,10 @@
     	select * from movies where mno = #{mno}
     	
     </select>
+    
+    <select id="getSidebarData" resultType="MovieVO">
+    	select * from movies order by views limit 5
+    </select>
 
    
   	</mapper>

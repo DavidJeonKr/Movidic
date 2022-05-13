@@ -10,6 +10,10 @@ $(document).ready(function() {
 		
 	})();
 
+ (function(){
+		getSidebarData()
+		
+	})();
 
 function getRankData(){
 
@@ -27,6 +31,22 @@ function getRankData(){
 	
 	})
 };
+
+function getSidebarData(){
+	$.ajax({
+		type:"get",
+		url:"movie/getSidebarData/",
+		dataType:"json",
+		contentType: "application/json; charset=UTF-8",
+		success:function(data){
+			console.log(data);
+			sidebarData(data);
+		},
+		error:function(error){
+			console.log(error);
+		}
+	})
+}
 
 function getLatelyData(){
 
@@ -78,6 +98,24 @@ function enterData(data, type){
 		$("."+type).html(strAdd);
 }
 
+
+function sidebarData(data){
+	var strAdd= "";
+	console.log(data);
+	$.each(data.list, function(i, el){
+		strAdd+='<a href="movie/detail?mno='+el.mno+'">';
+		strAdd+='<div class="product__sidebar__view__item set-bg mix day years" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
+		strAdd+='<div class="view">';
+		strAdd+='<i class="fa fa-eye"></i>'+el.views+'';
+		strAdd+='</div>';
+		strAdd+='<h5>';
+		strAdd+='<strong style="color:white">'+el.title+'</strong>';
+		strAdd+='</h5>';
+		strAdd+='</div>';
+		strAdd+='</a>';
+	})
+	$(".filter__gallery").html(strAdd);
+}
 
 })
 

@@ -9,6 +9,7 @@ public interface MovieService {
 	public ArrayList<MovieVO> getRankData();
 	public ArrayList<MovieVO> getLatelyData();
 	public ArrayList<MovieVO> getCategoryData(Criteria cri);
+	public ArrayList<MovieVO> getSidebarData();
 	public int getTotal(Criteria cri);
 	public MovieVO read(int mno);
  }

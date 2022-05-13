@@ -6,4 +6,7 @@
 <fullyQualifiedTypeName name="com.variable.movidic.vo.UserVO"/>
 <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.variable.movidic.util.Criteria"/>
 </qualifiedTypeNameHistroy>

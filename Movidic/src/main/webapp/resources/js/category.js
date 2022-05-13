@@ -6,6 +6,11 @@ $(document).ready(function() {
         getCategoryData(1, "액션");
     })();
     
+     (function(){
+		getSidebarData()
+		
+	})();
+    
 	$("#genre").change(function(){
 		event.preventDefault();
 		genreName= $("#genre option:selected").val();
@@ -28,6 +33,22 @@ $(document).ready(function() {
 		}, 400);
 		return false;
 	})
+	
+	function getSidebarData(){
+	$.ajax({
+		type:"get",
+		url:"getSidebarData/",
+		dataType:"json",
+		contentType: "application/json; charset=UTF-8",
+		success:function(data){
+			console.log(data);
+			sidebarData(data);
+		},
+		error:function(error){
+			console.log(error);
+		}
+	})
+}
 
     function getCategoryData(pageNum, genreName){
 
@@ -59,7 +80,7 @@ function enterData(pageNum, data){
 
     $.each(data.list, function(i,el){
 		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
-		strAdd+='<a href="movie/detail?mno' + el.mno + '">';
+		strAdd+='<a href="detail?mno=' + el.mno + '">';
 		strAdd+='<div class="product__item">';
 		strAdd+='<div class="product__item__pic set-bg" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
 		strAdd+='<div class="comment">';
@@ -97,6 +118,25 @@ function enterData(pageNum, data){
 		if(pageVO.next) pageAdd += '<li><a href="" data-pagenum=' + (pageVO.endPage + 1) + '><span class="glyphicon glyphicon-chevron-right"></span></a></li>';
 	
 		$(".product__pagination").html(pageAdd);
+}
+
+
+function sidebarData(data){
+	var strAdd= "";
+	console.log(data);
+	$.each(data.list, function(i, el){
+		strAdd+='<a href="detail?mno='+el.mno+'">';
+		strAdd+='<div class="product__sidebar__view__item set-bg mix day years" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
+		strAdd+='<div class="view">';
+		strAdd+='<i class="fa fa-eye"></i>'+el.views+'';
+		strAdd+='</div>';
+		strAdd+='<h5>';
+		strAdd+='<strong style="color:white">'+el.title+'</strong>';
+		strAdd+='</h5>';
+		strAdd+='</div>';
+		strAdd+='</a>';
+	})
+	$(".filter__gallery").html(strAdd);
 }
 })
 
