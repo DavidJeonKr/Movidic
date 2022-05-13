@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -30,7 +31,6 @@
                     <div class="breadcrumb__links">
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
                         <a href="./categories.html">Categories</a>
-                        <!-- TODO: 장르 받아서 입력--> 
                         <span>${movie.genre}</span>
                     </div>
                 </div>
@@ -45,15 +45,9 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-<<<<<<< Updated upstream
-                        <div class="anime__details__pic set-bg"  data-setbg="${movie.image}">
-                            <div class="comment"><i class="fa fa-comments"></i> 코멘트 </div>
-                            <div class="view"><i class="fa fa-eye"></i> 조회수 </div>
-=======
                         <div class="anime__details__pic set-bg" data-setbg="${movie.image}">
-                            <div class="comment"><i class="fa fa-comments"></i> 코멘트</div>
-                            <div class="view"><i class="fa fa-eye"></i> 조회수</div>
->>>>>>> Stashed changes
+                            <div class="comment"><i class="fa fa-comments"></i> ${count.replie_cnt}</div>
+                            <div class="view"><i class="fa fa-eye"></i> ${count.view_cnt }</div>
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -83,9 +77,10 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>개봉일:</span> ${movie.openData}</li>
+                                        	<fmt:formatDate value="${movie.openData}" pattern="yyyy/MM/dd" var="opendate"/>
+                                            <li><span>개봉일:</span> ${opendate}</li>
                                             <li><span>평점:</span> 7.31 / 1,515</li>
-                                            <li><span>조회수:</span> 8.5 / 161 times</li>
+                                            <li><span>조회수:</span> ${count.view_cnt} views</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -105,23 +100,7 @@
                             <div class="section-title">
                                 <h5>Reviews</h5>
                             </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__text">
-                                    <h6>사용자 이름(name) - <span>1 Hour ago(regdate)</span></h6>
-                                    <p>댓글 내용(content)</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__text">
-                                    <h6>Lewis Mann - <span>5 Hour ago</span></h6>
-                                    <p>Finally it came out ages ago</p>
-                                </div>
-                            </div>
-                            <div class="anime__review__item">
-                                <div class="anime__review__item__text">
-                                    <h6>Louis Tyler - <span>20 Hour ago</span></h6>
-                                    <p>Where is the episode 15 ? Slow update! Tch</p>
-                                </div>
+                            <div id="replies">
                             </div>
                         </div>
                         
@@ -130,12 +109,14 @@
                             <div class="section-title">
                                 <h5>Your Comment</h5>
                             </div>
+                        <%--  <c:if test="${not empty login }"> --%>
                             <div>
                             	<input id="mno" type="hidden" value="${movie.mno}">
                             	<input id="login_name" type="hidden" value="${login.name}">
-                                <textarea id="content" placeholder="Your Comment">${login.name}</textarea>
+                                <textarea id="content" placeholder="Your Comment"></textarea>
                                 <button type="submit" id="submit"><i class="fa fa-location-arrow"></i> Review</button>
                             </div>
+                        <%--  </c:if> --%>
                         </div>
                     </div>
                     

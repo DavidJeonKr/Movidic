@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
 import com.variable.movidic.movie.mapper.MovieMapper;
 import com.variable.movidic.util.Criteria;
@@ -55,6 +56,21 @@ public class MovieServiceImpl implements MovieService{
 	public ArrayList<MovieVO> getSidebarData() {
 		// TODO Auto-generated method stub
 		return movieMapper.getSidebarData();
+	}
+
+	//댓글 수 조회 수 조회
+	@Override
+	public CountVO getCount(int mno) {
+		
+		
+		return movieMapper.getCount(mno);
+	}
+
+	@Override
+	public int updateHitCnt(int mno) {
+		
+		
+		return movieMapper.updateHitCnt(mno);
 	}
 
 }

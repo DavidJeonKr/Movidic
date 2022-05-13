@@ -2,6 +2,7 @@ package com.variable.movidic.movie.mapper;
 
 import java.util.ArrayList;
 
+import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
 import com.variable.movidic.util.Criteria;
 
@@ -14,5 +15,9 @@ public interface MovieMapper {
 	public int getTotal(Criteria cri);
 	public ArrayList<MovieVO> getCategoryData();
 	MovieVO read(int mno);
+	//조회수, 댓글 수 조회
+	CountVO getCount(int mno);
+	//조회수 증가
+	int updateHitCnt(int mno);
 
 }

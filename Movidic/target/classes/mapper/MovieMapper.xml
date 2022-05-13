@@ -38,6 +38,19 @@
     <select id="getSidebarData" resultType="MovieVO">
     	select * from movies order by views limit 5
     </select>
+    
+    <!-- 조회 수 증가 -->
+    <update id="updateHitCnt" >
+    	update movies set views = views + 1 where mno = #{mno};
+    </update>
+    
+    
+    <!-- 조회 수 댓글 수 -->
+    <select id="getCount" resultType="CountVO">
+	select m.views as view_cnt, count(r.mno) as replie_cnt
+	from movies as m left join replies as r on m.mno = r.mno
+	where m.mno = #{mno};
+    </select>
 
    
   	</mapper>

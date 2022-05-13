@@ -37,6 +37,7 @@ public class HomeController {
 		
 		ArrayList<MovieVO> list = movieService.getRankData();
 		
+		
 		model.addAttribute("sliderData", list);
 		
 
