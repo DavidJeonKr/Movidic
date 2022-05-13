@@ -3,3 +3,42 @@
 5월 12, 2022 13:08:52.553 [44364:53052:0512/130852.551:ERROR:device_event_log_impl.cc(214)] [13:08:52.551] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
 5월 12, 2022 13:09:49.547 [44364:58740:0512/130949.547:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
 5월 12, 2022 13:20:30.331 [44364:53052:0512/132030.331:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).
+5월 12, 2022 15:31:22.179 [44364:53052:0512/153122.179:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 12, 2022 16:56:46.720 [44364:53052:0512/165646.719:ERROR:device_event_log_impl.cc(214)] [16:56:46.720] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 12, 2022 18:09:52.593 [44364:84832:0512/180952.593:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 12, 2022 23:09:52.596 [44364:65212:0512/230952.596:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 13, 2022 01:33:51.723 [44364:53052:0513/013351.723:ERROR:device_event_log_impl.cc(214)] [01:33:51.722] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:33:51.737 [44364:53052:0513/013351.737:ERROR:device_event_log_impl.cc(214)] [01:33:51.735] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:33:51.752 [44364:53052:0513/013351.751:ERROR:device_event_log_impl.cc(214)] [01:33:51.751] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:33:51.752 [44364:53052:0513/013351.751:ERROR:device_event_log_impl.cc(214)] [01:33:51.751] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:12.500 [44364:53052:0513/013412.500:ERROR:device_event_log_impl.cc(214)] [01:34:12.499] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:12.544 [44364:53052:0513/013412.543:ERROR:device_event_log_impl.cc(214)] [01:34:12.544] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:12.557 [44364:53052:0513/013412.557:ERROR:device_event_log_impl.cc(214)] [01:34:12.556] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:12.559 [44364:53052:0513/013412.558:ERROR:device_event_log_impl.cc(214)] [01:34:12.557] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:12.733 [44364:53052:0513/013412.733:ERROR:device_event_log_impl.cc(214)] [01:34:12.732] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:13.89 [44364:53052:0513/013413.089:ERROR:device_event_log_impl.cc(214)] [01:34:13.088] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:13.99 [44364:53052:0513/013413.099:ERROR:device_event_log_impl.cc(214)] [01:34:13.099] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:13.115 [44364:53052:0513/013413.115:ERROR:device_event_log_impl.cc(214)] [01:34:13.113] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:13.115 [44364:53052:0513/013413.115:ERROR:device_event_log_impl.cc(214)] [01:34:13.115] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:13.357 [44364:53052:0513/013413.356:ERROR:device_event_log_impl.cc(214)] [01:34:13.355] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:13.368 [44364:53052:0513/013413.368:ERROR:device_event_log_impl.cc(214)] [01:34:13.367] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 13, 2022 01:34:13.381 [44364:53052:0513/013413.380:ERROR:device_event_log_impl.cc(214)] [01:34:13.379] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 01:34:13.381 [44364:53052:0513/013413.381:ERROR:device_event_log_impl.cc(214)] [01:34:13.380] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+5월 13, 2022 11:25:51.660 NEW SESSION
+5월 13, 2022 11:25:51.660 [3056:15936:0513/112551.659:ERROR:device_event_log_impl.cc(214)] [11:25:51.659] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 13, 2022 11:26:48.625 [3056:70752:0513/112648.624:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 13, 2022 11:50:12.545 NEW SESSION
+5월 13, 2022 11:50:12.546 [81996:20208:0513/115012.544:ERROR:device_event_log_impl.cc(214)] [11:50:12.545] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 13, 2022 11:50:37.557 [49972:42396:0513/115037.557:ERROR:device_event_log_impl.cc(214)] [11:50:37.557] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 13, 2022 11:51:34.558 [49972:81676:0513/115134.558:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 13, 2022 11:53:48.94 NEW SESSION
+5월 13, 2022 11:53:48.94 [73492:29468:0513/115348.093:ERROR:device_event_log_impl.cc(214)] [11:53:48.093] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+5월 13, 2022 11:59:26.905 NEW SESSION
+5월 13, 2022 11:59:26.905 [7312:12332:0513/115926.903:ERROR:device_event_log_impl.cc(214)] [11:59:26.903] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 13, 2022 12:00:23.876 [7312:17744:0513/120023.876:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 13, 2022 12:45:14.436 [7312:12332:0513/124514.436:ERROR:device_event_log_impl.cc(214)] [12:45:14.436] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 13, 2022 13:20:30.343 [7312:12332:0513/132030.343:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Invalid credentials (credentials rejected by client).

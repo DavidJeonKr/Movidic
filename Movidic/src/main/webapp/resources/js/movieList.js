@@ -11,8 +11,6 @@ $(document).ready(function() {
 	})();
 
 
-})
-
 function getRankData(){
 
 	$.ajax({
@@ -21,7 +19,6 @@ function getRankData(){
 	dataType: "json",
 	contentType : "application/json; charset=UTF-8",
 	success : function(data) {
-	console.log(data);
 		enterData(data, "rank_movies");
 	},
 	error : function(error) {
@@ -32,13 +29,14 @@ function getRankData(){
 };
 
 function getLatelyData(){
+
+
 	$.ajax({
 	type:"get",
 	url:"movie/getLatelyData/",
 	dataType: "json",
 	contentType : "application/json; charset=UTF-8",
 	success:function(data){
-
 		enterData(data, "lately_movies");
 	},
 	error:function(error){
@@ -50,9 +48,9 @@ function getLatelyData(){
 
 function enterData(data, type){
 	var strAdd= "";
-
 	
 	$.each(data.list, function(i,el){
+	
 		strAdd+='<div class="col-lg-4 col-md-6 col-sm-6">';
 		strAdd+='<a href="movie/detail?mno' + el.mno + '">';
 		strAdd+='<div class="product__item">';
@@ -70,13 +68,16 @@ function enterData(data, type){
 		strAdd+='<li>Movie</li>';
 		strAdd+='</ul>';
 		strAdd+='<h5>';
-		strAdd+='The Seven Deadly Sins: Wrath of the Gods';
+		strAdd+='+el.title+';
 		strAdd+='</h5>';
 		strAdd+='</div>';
 		strAdd+='</div>';
 		strAdd+='</a>';
 		strAdd+='</div>';
 		})
-		
 		$("."+type).html(strAdd);
 }
+
+
+})
+

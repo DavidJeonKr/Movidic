@@ -8,4 +8,5 @@ public interface MovieMapper {
 
 	public ArrayList<MovieVO> getRankData();
 	public ArrayList<MovieVO> getLatelyData();
+	public ArrayList<MovieVO> getCategoryData();
 }
