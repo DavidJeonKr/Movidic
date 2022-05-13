@@ -14,11 +14,6 @@ $(document).ready(function() {
 		getSidebarData()
 		
 	})();
-	
-	(function(){
-		getTrendingData()
-		
-	})();
 
 
 function getSidebarData(){
@@ -54,7 +49,7 @@ function getRankData(){
 	})
 };
 
-function getTrendingData(){
+function getLatelyData(){
 
 
 	$.ajax({
