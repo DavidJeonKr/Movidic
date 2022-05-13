@@ -29,50 +29,23 @@
 	<section class="hero">
 		<div class="container">
 			<div class="hero__slider owl-carousel">
-				<div class="hero__items set-bg"
-					data-setbg="${pageContext.request.contextPath }/resources/img/slider/hero-1.jpg">
+			<c:forEach var="data" items="${sliderData }">
+				<a href="movie/detail?mno=${data.mno }">
+				<div class="hero__items set-bg" data-setbg="${data.image }">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="hero__text">
-								<div class="label">Adventure</div>
-								<h2>Fate / Stay Night: Unlimited Blade Works</h2>
-								<p>After 30 days of travel across the world...</p>
-								<a href="#"><span>Watch Now</span> <i
-									class="fa fa-angle-right"></i></a>
+								<div class="label">${data.genre }</div>
+								<h2>${data.title }</h2>
+								<p>${data.summary }</p>
+								<a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="hero__items set-bg"
-					data-setbg="${pageContext.request.contextPath }/resources/img/slider/slider1.jpg">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero__text">
-								<div class="label">스릴러, 전쟁, 사극</div>
-								<h2>명량</h2>
-								<p>2014년[2]에 개봉한, 이순신 장군의 명량 해전을 다룬 한국 영화이다. 감독은《최종병기 활》을
-									연출한 김한민. 원작은 박은우의 소설《명량》이며, 개봉 전 영화를 소설로 옮겨 각본 전철홍, 김한민, 지은이
-									김호경의《명량》이 출판되었다.</p>
-								<a href="#"><span>Watch Now</span> <i
-									class="fa fa-angle-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="hero__items set-bg"
-					data-setbg="${pageContext.request.contextPath }/resources/img/hero/hero-1.jpg">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero__text">
-								<div class="label">Adventure</div>
-								<h2>Fate / Stay Night: Unlimited Blade Works</h2>
-								<p>After 30 days of travel across the world...</p>
-								<a href="#"><span>Watch Now</span> <i
-									class="fa fa-angle-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
+				</a>
+				
+				</c:forEach>
 			</div>
 		</div>
 	</section>

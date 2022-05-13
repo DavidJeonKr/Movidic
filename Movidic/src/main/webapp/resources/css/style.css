@@ -472,6 +472,7 @@ ol {
 }
 
 .hero__items {
+	height:750px;
 	padding: 250px 0 42px 50px;
 	border-radius: 5px;
 }
@@ -521,6 +522,8 @@ ol {
 	-webkit-transition: all, 0.6s;
 	-o-transition: all, 0.6s;
 	transition: all, 0.6s;
+	height: 200px;
+	overflow:hidden;
 }
 
 .hero__text a {
