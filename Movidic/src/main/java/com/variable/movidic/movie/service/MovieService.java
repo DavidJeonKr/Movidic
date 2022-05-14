@@ -1,6 +1,7 @@
 package com.variable.movidic.movie.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
@@ -17,4 +18,6 @@ public interface MovieService {
 	CountVO getCount(int mno);
 	//조회수 증가
 	int updateHitCnt(int mno);
+	
+	List<MovieVO> getRecentReplie();
  }

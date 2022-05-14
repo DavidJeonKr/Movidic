@@ -51,6 +51,19 @@
 	from movies as m left join replies as r on m.mno = r.mno
 	where m.mno = #{mno};
     </select>
+    
+    <!-- 최근 댓글 영화 목록 조회-->
+    
+    <select id="getRecentReplie" resultType="MovieVO">
+		select movies.mno, movies.title, movies.genre, movies.views,
+		movies.image
+		from replies
+		right join movies on replies.mno = movies.mno
+		group by movies.title
+		order by regdate desc
+		limit 4
+    </select>
+    
 
    
   	</mapper>

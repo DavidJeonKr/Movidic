@@ -3,11 +3,14 @@ package com.variable.movidic.controller;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -122,4 +125,18 @@ public class MovieController {
 		
 		return map;
 	}
+	@ResponseBody
+	@RequestMapping(value = "/getRecentReplie", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<List<MovieVO>> getRecentReplie() {
+		
+		List<MovieVO> list = movieService.getRecentReplie();
+		logger.info("MovieController 호출 => list: {}",list.get(0));
+		ResponseEntity<List<MovieVO>> entity = new ResponseEntity<List<MovieVO>>(list, HttpStatus.OK);
+		
+		return entity;
+	}
+	
+	
+	
+	
 }

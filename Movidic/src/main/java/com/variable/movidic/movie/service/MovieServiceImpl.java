@@ -1,6 +1,7 @@
 package com.variable.movidic.movie.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,12 +66,21 @@ public class MovieServiceImpl implements MovieService{
 		
 		return movieMapper.getCount(mno);
 	}
-
+	//조회수 증가
 	@Override
 	public int updateHitCnt(int mno) {
 		
 		
 		return movieMapper.updateHitCnt(mno);
 	}
+	
+	//최근 댓글 영화목록
+	@Override
+	public List<MovieVO> getRecentReplie() {
+		
+		return movieMapper.getRecentReplie();
+	}
+	
+	
 
 }

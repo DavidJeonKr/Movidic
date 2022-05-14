@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 
     
+
+
     (function(){
         getCategoryData(1, "액션");
     })();
@@ -10,6 +12,10 @@ $(document).ready(function() {
 		getSidebarData()
 		
 	})();
+
+	(function(){
+        getRecentReplie();
+    })();
     
 	$("#genre").change(function(){
 		event.preventDefault();
@@ -138,5 +144,44 @@ function sidebarData(data){
 	})
 	$(".filter__gallery").html(strAdd);
 }
+
+function getRecentReplie() {
+	var list = '';
+
+
+	$.getJSON('getRecentReplie/', function(data){
+		
+		$('.recentReplie').empty();
+		$(data).each(function() {
+			list += '<div class="product__sidebar__comment__item">'
+			+ '<div class="product__sidebar__comment__item__pic">'
+			+ '<img src= "' + this.image +'"+ alt = "">'
+			+ '</div>'
+			+ '<div class="product__sidebar__comment__item__text">'
+			+ '<ul><li>'
+			+ this.genre
+			+ '</li></ul>'
+			+ '<h5>'
+			+ '<a href="detail?mno=' + this.mno + '">'
+			+ this.title
+			+ '</a>'
+			+ '</h5>'
+			+ '<span><i class="fa fa-eye"></i>'
+			+ this.views + 'Viewes'
+			+ '</span>'
+			+ '</div></div>';
+
+			
+		});
+		$('.recentReplie').html(list);
+
+
+
+
+	});
+	
+
+}
+
 })
 
