@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Top View"/>
+		<item key="selection" value="star"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="star"/>
+			<item value="header__menu"/>
+			<item value="resources"/>
+			<item value="resoureces"/>
+			<item value=".product__sidebar__comment__item__pic"/>
+			<item value=".product__sidebar__comment"/>
+			<item value=".product__sidebar"/>
 			<item value="top view"/>
 			<item value="comment-4"/>
 			<item value="comment"/>
@@ -16,21 +23,14 @@
 			<item value="hero__items"/>
 			<item value="hero"/>
 			<item value="hero_items"/>
-			<item value="rank"/>
-			<item value="form"/>
-			<item value="console"/>
-			<item value="side"/>
-			<item value="sid"/>
-			<item value="getSidebarData"/>
-			<item value="sidebar"/>
 		</list>
 		<list key="replacehistory">
 			<item value="${pageContext.request.contextPath }/resources/img"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="954"/>
-		<item key="DIALOG_Y_ORIGIN" value="318"/>
+		<item key="DIALOG_X_ORIGIN" value="267"/>
+		<item key="DIALOG_Y_ORIGIN" value="139"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

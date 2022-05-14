@@ -1,0 +1,3 @@
+.gradeModal{
+    display: none;
+}

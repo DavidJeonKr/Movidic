@@ -1,0 +1,6 @@
+$(".follow-btn").click(function(){
+    $(".gradeModal").css("display","block");
+    console.log(this);
+    console.log(".gradeModal");
+
+})
