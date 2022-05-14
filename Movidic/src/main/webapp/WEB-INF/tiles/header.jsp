@@ -21,12 +21,15 @@
                                 <li><a href="${pageContext.request.contextPath }/">Homepage</a></li>
                                 <li><a href="${pageContext.request.contextPath }/movie/category">Categories</a>
                                 </li>
-                                <li><a href="./blog.html">Our Blog</a></li>
+                                <li><a href="map">Map</a></li>
                                 <li><a href="#">Contacts</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
+                <!-- 지도 -->
+                
+                
                 <div class="col-lg-2">
                     <div class="header__right">
                         <!-- 로그인 페이지  -->

@@ -14,14 +14,13 @@
 <title>Movidic</title>
 
 </head>
-
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 
-
+	
 
 
 	<!-- Hero Section Begin -->
