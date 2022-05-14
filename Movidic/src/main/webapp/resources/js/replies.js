@@ -38,6 +38,9 @@ function insertreplie() {
             console.log(result);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown){
+        	console.log(XMLHttpRequest);
+        	console.log(textStatus);
+        	console.log(errorThrown);
             alert('서버와의 통신이 원할하지 않습니다.\n다시 시도 해 주십시오.' );
             }
     })

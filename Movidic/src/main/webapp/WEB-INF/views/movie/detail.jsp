@@ -45,15 +45,11 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-<<<<<<< Updated upstream
+
                         <div class="anime__details__pic set-bg"  data-setbg="${movie.image}">
                             <div class="comment"><i class="fa fa-comments"></i> 코멘트 </div>
                             <div class="view"><i class="fa fa-eye"></i> 조회수 </div>
-=======
-                        <div class="anime__details__pic set-bg" data-setbg="${movie.image}">
-                            <div class="comment"><i class="fa fa-comments"></i> 코멘트</div>
-                            <div class="view"><i class="fa fa-eye"></i> 조회수</div>
->>>>>>> Stashed changes
+
                         </div>
                     </div>
                     <div class="col-lg-9">

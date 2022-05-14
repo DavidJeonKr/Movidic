@@ -107,8 +107,7 @@ function enterData(data, type){
 		strAdd+='</div>';
 		strAdd+='<div class="product__item__text">';
 		strAdd+='<ul>';
-		strAdd+='<li>Active</li>';
-		strAdd+='<li>Movie</li>';
+		strAdd+='<li>'+el.genre+'</li>';
 		strAdd+='</ul>';
 		strAdd+='<h5>';
 		strAdd+='+el.title+';

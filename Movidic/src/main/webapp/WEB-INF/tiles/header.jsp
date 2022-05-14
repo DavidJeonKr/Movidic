@@ -18,15 +18,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li><a href="${pageContext.request.contextPath }/">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="${pageContext.request.contextPath }/movie/category">Categories</a></li>
-                                        <li><a href="./anime-details.html">Anime Details</a></li>
-                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                        <li><a href="${pageContext.request.contextPath }/user/signup">Sign Up</a></li>
-                                        <li><a href="${pageContext.request.contextPath }/user/login">Login</a></li>
-                                    </ul>
+                                <li><a href="${pageContext.request.contextPath }/movie/category">Categories <span class="arrow_carrot-down"></span></a>
                                 </li>
                                 <li><a href="./blog.html">Our Blog</a></li>
                                 <li><a href="#">Contacts</a></li>

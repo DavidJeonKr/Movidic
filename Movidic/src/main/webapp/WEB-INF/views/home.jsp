@@ -13,7 +13,6 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Movidic</title>
 
-
 </head>
 
 <body>
@@ -29,28 +28,29 @@
 	<section class="hero">
 		<div class="container">
 			<div class="hero__slider owl-carousel">
-			<c:forEach var="data" items="${sliderData }">
-				<a href="movie/detail?mno=${data.mno }">
-				</a>
-				<div class="hero__items set-bg" data-setbg="${data.image }">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero__text">
-								<div class="label">${data.genre }</div>
-								<h2>${data.title }</h2>
-								<p>${data.summary }</p>
-								<a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+				<c:forEach var="data" items="${sliderData }">
+
+					<div class="hero__items set-bg" data-setbg="${data.image }">
+					<a href="movie/detail?mno=${data.mno }" class="detailMove"> </a>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="hero__text">
+									<div class="label">${data.genre }</div>
+									<h2>${data.title }</h2>
+									<p>${data.summary }</p>
+									<a href="movie/detail?mno=${data.mno }" class="detailMove"><span>상세보기</span></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				
+
+
 				</c:forEach>
 			</div>
 		</div>
 	</section>
-	<!-- Hero Section End -->
+
+
 
 	<!-- Product Section Begin -->
 	<section class="product spad">
@@ -71,9 +71,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row rank_movies">
-							
-						</div>
+						<div class="row rank_movies"></div>
 					</div>
 					<div class="popular__product">
 						<div class="row">
@@ -89,9 +87,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row trending_movies">
-						
-						</div>
+						<div class="row trending_movies"></div>
 					</div>
 					<div class="recent__product">
 						<div class="row">
@@ -107,9 +103,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row lately_movies">
-							
-						</div>
+						<div class="row lately_movies"></div>
 					</div>
 
 				</div>
@@ -120,9 +114,7 @@
 								<h5>Top Views</h5>
 							</div>
 
-							<div class="filter__gallery">
-
-							</div>
+							<div class="filter__gallery"></div>
 						</div>
 						<div class="product__sidebar__comment">
 							<div class="section-title">
@@ -130,7 +122,9 @@
 							</div>
 							<div class="product__sidebar__comment__item">
 								<div class="product__sidebar__comment__item__pic">
-									<img src="${pageContext.request.contextPath }/resources/img/sidebar/comment-1.jpg" alt="">
+									<img
+										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-1.jpg"
+										alt="">
 								</div>
 								<div class="product__sidebar__comment__item__text">
 									<ul>
@@ -145,7 +139,9 @@
 							</div>
 							<div class="product__sidebar__comment__item">
 								<div class="product__sidebar__comment__item__pic">
-									<img src="${pageContext.request.contextPath }/resources/img/sidebar/comment-2.jpg" alt="">
+									<img
+										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-2.jpg"
+										alt="">
 								</div>
 								<div class="product__sidebar__comment__item__text">
 									<ul>
@@ -160,7 +156,9 @@
 							</div>
 							<div class="product__sidebar__comment__item">
 								<div class="product__sidebar__comment__item__pic">
-									<img src="${pageContext.request.contextPath }/resources/img/sidebar/comment-3.jpg" alt="">
+									<img
+										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-3.jpg"
+										alt="">
 								</div>
 								<div class="product__sidebar__comment__item__text">
 									<ul>
@@ -175,7 +173,9 @@
 							</div>
 							<div class="product__sidebar__comment__item">
 								<div class="product__sidebar__comment__item__pic">
-									<img src="${pageContext.request.contextPath }/resources/img/sidebar/comment-4.jpg" alt="">
+									<img
+										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-4.jpg"
+										alt="">
 								</div>
 								<div class="product__sidebar__comment__item__text">
 									<ul>
@@ -221,8 +221,9 @@
 	}
 </script>
 
-	<script
+<script
 	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
-	<script
+<script
 	src="${pageContext.request.contextPath }/resources/js/movieList.js"></script>
+
 </html>
