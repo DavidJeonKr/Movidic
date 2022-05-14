@@ -9,5 +9,6 @@
 		<typeAlias type="com.variable.movidic.domain.MovieVO" alias="MovieVO"/>
 		<typeAlias type="com.variable.movidic.domain.ReplieVO" alias="ReplieVO"/>
 		<typeAlias type="com.variable.movidic.domain.CountVO" alias="CountVO"/>
+		<typeAlias type="com.variable.movidic.domain.RatingVO" alias="RatingVO"/>
 	</typeAliases>
 </configuration>

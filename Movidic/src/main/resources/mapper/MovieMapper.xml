@@ -64,6 +64,24 @@
 		limit 4
     </select>
     
+    <!-- 평점 추가 -->
+    <insert id="insertRating">
+    	insert into rating(mno, rating, email) values(#{mno}, #{rating}, #{email})
+    </insert>
+    
+    <!-- 평점 조회 -->
+    <select id="avgRating" parameterType="int" resultType="hashmap">
+    	select avg(rating) as rating, count(rating) as count
+    	from rating
+    	where mno = #{mno}
+    </select>
+    
+    <!-- 평점 준 회원 조회 -->
+    
+    <select id="checkRating" resultType="RatingVO">
+    	select * from rating where email = #{email} and mno = #{mno}
+    </select>
+    
 
    
   	</mapper>

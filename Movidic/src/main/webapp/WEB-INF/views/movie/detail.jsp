@@ -69,7 +69,7 @@
 									<a href="#"><i class="fa fa-star"></i></a> <a href="#"><i
 										class="fa fa-star-half-o"></i></a>
 								</div>
-								<span>1.029 Votes</span>
+								<span>${rating.count} Votes</span>
 							</div>
 							<p>${movie.summary}</p>
 							<div class="anime__details__widget">
@@ -86,7 +86,7 @@
 											<fmt:formatDate value="${movie.openData}"
 												pattern="yyyy/MM/dd" var="opendate" />
 											<li><span>개봉일:</span> ${opendate}</li>
-											<li><span>평점:</span> 7.31 / 1,515</li>
+											<li><span>평점:</span> ${rating.rating} / ${rating.count} Votes </li>
 											<li><span>조회수:</span> ${count.view_cnt} views</li>
 										</ul>
 									</div>
@@ -120,6 +120,7 @@
 						<div>
 							<input id="mno" type="hidden" value="${movie.mno}"> <input
 								id="login_name" type="hidden" value="${login.name}">
+							<input id="login_email" type="hidden" value="${login.email}"/>
 							<textarea id="content" placeholder="Your Comment"></textarea>
 							<button type="submit" id="submit">
 								<i class="fa fa-location-arrow"></i> Review
@@ -171,42 +172,24 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class="starpoint_wrap">
-						<div class="starpoint_box">
-							<label for="starpoint_1" class="label_star" title="0.5"><span
-								class="blind">0.5점</span></label> <label for="starpoint_2"
-								class="label_star" title="1"><span class="blind">1점</span></label>
-							<label for="starpoint_3" class="label_star" title="1.5"><span
-								class="blind">1.5점</span></label> <label for="starpoint_4"
-								class="label_star" title="2"><span class="blind">2점</span></label>
-							<label for="starpoint_5" class="label_star" title="2.5"><span
-								class="blind">2.5점</span></label> <label for="starpoint_6"
-								class="label_star" title="3"><span class="blind">3점</span></label>
-							<label for="starpoint_7" class="label_star" title="3.5"><span
-								class="blind">3.5점</span></label> <label for="starpoint_8"
-								class="label_star" title="4"><span class="blind">4점</span></label>
-							<label for="starpoint_9" class="label_star" title="4.5"><span
-								class="blind">4.5점</span></label> <label for="starpoint_10"
-								class="label_star" title="5"><span class="blind">5점</span></label>
-							<input type="radio" name="starpoint" id="starpoint_1"
-								class="star_radio"> <input type="radio" name="starpoint"
-								id="starpoint_2" class="star_radio"> <input type="radio"
-								name="starpoint" id="starpoint_3" class="star_radio"> <input
-								type="radio" name="starpoint" id="starpoint_4"
-								class="star_radio"> <input type="radio" name="starpoint"
-								id="starpoint_5" class="star_radio"> <input type="radio"
-								name="starpoint" id="starpoint_6" class="star_radio"> <input
-								type="radio" name="starpoint" id="starpoint_7"
-								class="star_radio"> <input type="radio" name="starpoint"
-								id="starpoint_8" class="star_radio"> <input type="radio"
-								name="starpoint" id="starpoint_9" class="star_radio"> <input
-								type="radio" name="starpoint" id="starpoint_10"
-								class="star_radio"> <span class="starpoint_bg"></span>
-						</div>
-					</div>
+					<span class="star-input">
+	<span class="input">
+    	<input type="radio" name="star-input" value="1" id="p1">
+    	<label for="p1">1</label>
+    	<input type="radio" name="star-input" value="2" id="p2">
+    	<label for="p2">2</label>
+    	<input type="radio" name="star-input" value="3" id="p3">
+    	<label for="p3">3</label>
+    	<input type="radio" name="star-input" value="4" id="p4">
+    	<label for="p4">4</label>
+    	<input type="radio" name="star-input" value="5" id="p5">
+    	<label for="p5">5</label>
+  	</span>
+  	<output for="star-input"><b>0</b>점</output>						
+</span>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button id= "saveBtn" type="button" class="btn btn-primary">Save changes</button>
 					<button type="button" class="btn btn-secondary"	data-dismiss="modal" onclick="modalClose()">Close</button>
 				</div>
 			</div>
@@ -222,7 +205,7 @@
 	src="${pageContext.request.contextPath }/resources/js/category.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/replies.js"></script>
-<script src="${pageContext.request.contextPath }/resources/js/modal.js"></script>
+<script src="${pageContext.request.contextPath }/resources/js/modal.js?version=02"></script>
 
 
 

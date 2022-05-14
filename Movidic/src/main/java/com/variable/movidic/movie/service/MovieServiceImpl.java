@@ -1,13 +1,16 @@
 package com.variable.movidic.movie.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
+import com.variable.movidic.domain.RatingVO;
 import com.variable.movidic.movie.mapper.MovieMapper;
 import com.variable.movidic.util.Criteria;
 
@@ -80,6 +83,30 @@ public class MovieServiceImpl implements MovieService{
 		
 		return movieMapper.getRecentReplie();
 	}
+	// 평점 주기
+	@Override
+	public int insertRating(RatingVO ratingVO) {
+		
+		
+		return movieMapper.insertRating(ratingVO);
+	}
+	// 평점 평균 / 카운트 조회
+	@Override
+	public Map<String, Object> avgRating(int mno) {
+		
+		Map<String, Object> map = (HashMap<String, Object>) movieMapper.avgRating(mno);
+		
+		return map;
+	}
+
+	@Override
+	public RatingVO checkRating(RatingVO ratingVO) {
+		
+		
+		return movieMapper.checkRating(ratingVO);
+	}
+	
+	
 	
 	
 

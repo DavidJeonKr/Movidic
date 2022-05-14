@@ -1,10 +1,12 @@
 package com.variable.movidic.movie.mapper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
+import com.variable.movidic.domain.RatingVO;
 import com.variable.movidic.util.Criteria;
 
 public interface MovieMapper {
@@ -22,6 +24,12 @@ public interface MovieMapper {
 	int updateHitCnt(int mno);	
 	//최근 등록 댓글 영화 목록 조회
 	List<MovieVO> getRecentReplie();
+	//평점 추가
+	int insertRating(RatingVO ratingVO);
+	//
+	HashMap<String, Object> avgRating(int mno);
+	RatingVO checkRating(RatingVO ratingVO);
+	
 	
 
 }
