@@ -44,8 +44,8 @@ function insertreplie() {
 function getAllReplies() {
     var mno_val = $('#mno').val();
     $.getJSON('/movidic/replies/all/' + mno_val, function(response){
-        alert('getAllReplies 통신 성공');
-        console.log('getAllReplies 통신 성공');
+        // alert('getAllReplies 통신 성공');
+        // console.log('getAllReplies 통신 성공');
         var list = '';
 
         $(response).each(function() {
