@@ -32,7 +32,7 @@
                         <!-- 로그인 페이지  -->
                         <!--  <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile"></span></a> -->
                         <c:if test="${empty login}">
-                        <a href="${pageContext.request.contextPath }/user/login"><i class="bi bi-code"></i><span class="icon_profile">로그인</span></a>
+                        <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile">로그인<span data-icon="&#xe004"></span></span></a>
                         </c:if>
                         <c:if test="${not empty login }">
                         <!-- TODO: 유저정보 페이지 생성 -->

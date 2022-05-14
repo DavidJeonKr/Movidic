@@ -45,17 +45,9 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-<<<<<<< HEAD
-
-                        <div class="anime__details__pic set-bg"  data-setbg="${movie.image}">
-                            <div class="comment"><i class="fa fa-comments"></i> 코멘트 </div>
-                            <div class="view"><i class="fa fa-eye"></i> 조회수 </div>
-
-=======
                         <div class="anime__details__pic set-bg" data-setbg="${movie.image}">
                             <div class="comment"><i class="fa fa-comments"></i> ${count.replie_cnt}</div>
                             <div class="view"><i class="fa fa-eye"></i> ${count.view_cnt }</div>
->>>>>>> 3f0cabec949cc1c6d64fe2dc07f984f7d11f6d7a
                         </div>
                     </div>
                     <div class="col-lg-9">
