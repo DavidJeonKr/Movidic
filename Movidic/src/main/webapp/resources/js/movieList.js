@@ -103,11 +103,8 @@ function enterData(data, type){
 		strAdd+='<a href="movie/detail?mno=' + el.mno + '">';
 		strAdd+='<div class="product__item">';
 		strAdd+='<div class="product__item__pic set-bg" data-setbg="'+el.image+'" style="background-image:url('+el.image+');">';
-		strAdd+='<div class="comment">';
-		strAdd+='<i class="fa fa-comments"></i> 11';
-		strAdd+='</div>';
 		strAdd+='<div class="view">';
-		strAdd+='<i class="fa fa-eye"></i> 9141';
+		strAdd+='<i class="fa fa-eye"></i> '+el.views;
 		strAdd+='</div>';
 		strAdd+='</div>';
 		strAdd+='<div class="product__item__text">';
@@ -183,4 +180,3 @@ function getRecentReplie() {
 }
 
 })
-

@@ -6,17 +6,14 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Qualifier;
-=======
+
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
->>>>>>> 3f0cabec949cc1c6d64fe2dc07f984f7d11f6d7a
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.variable.movidic.domain.ReplieVO;
@@ -31,16 +28,10 @@ public class ReplieRestController {
 
 	@Autowired
 	private ReplieService replieService;
-<<<<<<< HEAD
-	
-	@RequestMapping(value = "all/{mno}", method = RequestMethod.POST)
-	public int readAllReplies(@RequestBody ReplieVO replieVO) {
-		logger.info("replieVo => {}",replieVO.toString());
 
-		
-		int result = replieService.insert(replieVO);
-		logger.info("result =>{} ",result);
-=======
+	
+
+
 	//새 댓글 작성
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public ResponseEntity<Integer> insertReplies(@RequestBody ReplieVO replieVO) {
@@ -52,7 +43,7 @@ public class ReplieRestController {
 		int result = replieService.insert(replieVO);
 		logger.info("result => ",result);
 		ResponseEntity<Integer> entity = new ResponseEntity<Integer>(result, HttpStatus.OK);
->>>>>>> 3f0cabec949cc1c6d64fe2dc07f984f7d11f6d7a
+
 		
 		return entity;
 	}

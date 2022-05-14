@@ -68,8 +68,6 @@ public class MovieController {
 	public HashMap<String, Object> getRankData(){
 		ArrayList<MovieVO> list= movieService.getRankData();
 		
-		System.out.println("랭크데이터");
-//		System.out.println(list);
 		HashMap<String, Object> map= new HashMap<>();
 		map.put("list", list);
 		

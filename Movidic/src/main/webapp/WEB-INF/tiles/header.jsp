@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 
+<script src="https://kit.fontawesome.com/f824491a2f.js" crossorigin="anonymous"></script>
 	 <header class="header">
         <div class="container">
             <div class="row">
@@ -28,11 +29,10 @@
                 </div>
                 <div class="col-lg-2">
                     <div class="header__right">
-                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
                         <!-- 로그인 페이지  -->
                         <!--  <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile"></span></a> -->
                         <c:if test="${empty login}">
-                        <a href="${pageContext.request.contextPath }/user/login"><span class="icon_profile">로그인</span></a>
+                        <a href="${pageContext.request.contextPath }/user/login"><i class="bi bi-code"></i><span class="icon_profile">로그인</span></a>
                         </c:if>
                         <c:if test="${not empty login }">
                         <!-- TODO: 유저정보 페이지 생성 -->

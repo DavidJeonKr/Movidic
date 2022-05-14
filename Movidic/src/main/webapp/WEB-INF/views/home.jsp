@@ -120,78 +120,10 @@
 							<div class="section-title">
 								<h5>New Comment</h5>
 							</div>
-<<<<<<< HEAD
-							<div class="product__sidebar__comment__item">
-								<div class="product__sidebar__comment__item__pic">
-									<img
-										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-1.jpg"
-										alt="">
-								</div>
-								<div class="product__sidebar__comment__item__text">
-									<ul>
-										<li>Active</li>
-										<li>Movie</li>
-									</ul>
-									<h5>
-										<a href="#">The Seven Deadly Sins: Wrath of the Gods</a>
-									</h5>
-									<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-								</div>
-							</div>
-							<div class="product__sidebar__comment__item">
-								<div class="product__sidebar__comment__item__pic">
-									<img
-										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-2.jpg"
-										alt="">
-								</div>
-								<div class="product__sidebar__comment__item__text">
-									<ul>
-										<li>Active</li>
-										<li>Movie</li>
-									</ul>
-									<h5>
-										<a href="#">Shirogane Tamashii hen Kouhan sen</a>
-									</h5>
-									<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-								</div>
-							</div>
-							<div class="product__sidebar__comment__item">
-								<div class="product__sidebar__comment__item__pic">
-									<img
-										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-3.jpg"
-										alt="">
-								</div>
-								<div class="product__sidebar__comment__item__text">
-									<ul>
-										<li>Active</li>
-										<li>Movie</li>
-									</ul>
-									<h5>
-										<a href="#">Kizumonogatari III: Reiket su-hen</a>
-									</h5>
-									<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-								</div>
-							</div>
-							<div class="product__sidebar__comment__item">
-								<div class="product__sidebar__comment__item__pic">
-									<img
-										src="${pageContext.request.contextPath }/resources/img/sidebar/comment-4.jpg"
-										alt="">
-								</div>
-								<div class="product__sidebar__comment__item__text">
-									<ul>
-										<li>Active</li>
-										<li>Movie</li>
-									</ul>
-									<h5>
-										<a href="#">Monogatari Series: Second Season</a>
-									</h5>
-									<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-								</div>
-=======
+
 							<div class="recentReplie">
 
->>>>>>> 3f0cabec949cc1c6d64fe2dc07f984f7d11f6d7a
+
 							</div>
 							
 						</div>
@@ -231,5 +163,6 @@
 	src="${pageContext.request.contextPath }/resources/js/jquery-3.3.1.min.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/movieList.js"></script>
+	
 
 </html>
