@@ -1,5 +1,7 @@
 package com.variable.movidic.domain;
 
+import java.util.Date;
+
 public class MovieVO {
 
 	private int mno;
@@ -9,15 +11,16 @@ public class MovieVO {
 	private String genre;
 	private String duration;
 	private String film_ration;
-	private String openData;
+	private Date openData;
 	private String image;
+	private int views;
 	
 	public MovieVO() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public MovieVO(int mno, String title, int rank, String summary, String genre, String duration, String film_ration,
-			String openData, String image) {
+			Date openData, String image, int views) {
 		super();
 		this.mno = mno;
 		this.title = title;
@@ -112,13 +115,13 @@ public class MovieVO {
 
 
 
-	public String getOpenData() {
+	public Date getOpenData() {
 		return openData;
 	}
 
 
 
-	public void setOpenData(String openData) {
+	public void setOpenData(Date openData) {
 		this.openData = openData;
 	}
 
@@ -134,7 +137,17 @@ public class MovieVO {
 		this.image = image;
 	}
 
+	
+	
 
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
+	}
 
 	@Override
 	public String toString() {

@@ -32,7 +32,7 @@ public class SignedInInterceptor implements HandlerInterceptor{
 				logger.info("쿠키 저장");
 				Cookie loginCookie = new Cookie("loginCookie", httpSession.getId());
 				loginCookie.setPath("/movidic");
-				loginCookie.setMaxAge(60*60);
+				loginCookie.setMaxAge(60*60*60);
 				
 				response.addCookie(loginCookie);
 			}

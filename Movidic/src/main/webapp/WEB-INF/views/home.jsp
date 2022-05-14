@@ -120,6 +120,7 @@
 							<div class="section-title">
 								<h5>New Comment</h5>
 							</div>
+<<<<<<< HEAD
 							<div class="product__sidebar__comment__item">
 								<div class="product__sidebar__comment__item__pic">
 									<img
@@ -187,7 +188,12 @@
 									</h5>
 									<span><i class="fa fa-eye"></i> 19.141 Viewes</span>
 								</div>
+=======
+							<div class="recentReplie">
+
+>>>>>>> 3f0cabec949cc1c6d64fe2dc07f984f7d11f6d7a
 							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -1,10 +1,12 @@
 package com.variable.movidic.movie.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
 import com.variable.movidic.movie.mapper.MovieMapper;
 import com.variable.movidic.util.Criteria;
@@ -56,5 +58,29 @@ public class MovieServiceImpl implements MovieService{
 		// TODO Auto-generated method stub
 		return movieMapper.getSidebarData();
 	}
+
+	//댓글 수 조회 수 조회
+	@Override
+	public CountVO getCount(int mno) {
+		
+		
+		return movieMapper.getCount(mno);
+	}
+	//조회수 증가
+	@Override
+	public int updateHitCnt(int mno) {
+		
+		
+		return movieMapper.updateHitCnt(mno);
+	}
+	
+	//최근 댓글 영화목록
+	@Override
+	public List<MovieVO> getRecentReplie() {
+		
+		return movieMapper.getRecentReplie();
+	}
+	
+	
 
 }
