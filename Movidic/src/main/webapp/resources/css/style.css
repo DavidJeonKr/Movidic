@@ -1165,6 +1165,9 @@ ol {
 	background: #1d1e39;
 	padding: 18px 30px 16px 20px;
 	border-radius: 10px;
+	justify-content: space-between;
+    flex-direction: column;
+    
 }
 
 .anime__review__item__text h6 {
@@ -1183,6 +1186,24 @@ ol {
 	line-height: 23px;
 	margin-bottom: 0;
 }
+/* 삭제 버튼 css */
+.anime__review__item__text .reply_delete {
+	width: 10%;
+    font-size: 13px;
+	color: #ffffff;
+	background: #e53637;
+	text-transform: uppercase;
+	padding: 10px 10px;
+	border-radius: 4px;
+}
+/* 이름/작성시간/삭제버튼 div */
+.anime_review_item__div_section {
+  display: flex;
+  justify-content: space-between;
+    
+}
+
+
 
 .anime__details__form div textarea {
 	width: 100%;

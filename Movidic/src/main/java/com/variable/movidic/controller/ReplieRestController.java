@@ -59,6 +59,17 @@ public class ReplieRestController {
 		return entity;
 	}
 	
+	@RequestMapping(value = "/delete/{mno}", method = RequestMethod.DELETE)
+	public ResponseEntity<Integer> deleteReplie(@PathVariable int mno) {
+		logger.info("ReplieRestController deleteReplie 메서드 호출 => mno: {}",mno);
+		
+		int result = replieService.deleteReplie(mno);
+		
+		ResponseEntity<Integer> entity = new ResponseEntity<Integer>(result, HttpStatus.OK);
+		
+		return entity;
+	}
+	
 	
 	
 	

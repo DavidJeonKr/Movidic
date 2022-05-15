@@ -204,7 +204,7 @@
 <script
 	src="${pageContext.request.contextPath }/resources/js/category.js"></script>
 <script
-	src="${pageContext.request.contextPath }/resources/js/replies.js"></script>
+	src="${pageContext.request.contextPath }/resources/js/replies.js?version=02"></script>
 <script src="${pageContext.request.contextPath }/resources/js/modal.js?version=02"></script>
 
 

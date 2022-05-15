@@ -8,5 +8,6 @@ public interface ReplieMapper {
 	
 	public int insert(ReplieVO replieVO);
 	List<ReplieVO> read(Integer mno);
+	public int deleteReplie(int mno);
 	
 }

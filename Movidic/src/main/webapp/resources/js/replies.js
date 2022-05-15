@@ -7,9 +7,41 @@ $(document).ready(function() {
 
     })
 
+    //댓글 삭제
+    $('#replies').on('click', '.reply_delete', function(event) {
+        var rno_val = $(this).prevAll('#rno').val();
+        var result = confirm('댓글을 삭제하시겠습니까?');
+        if(result) {
+            $.ajax({
+                url: '/movidic/replies/delete/' + rno_val,
+                type: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-HTTP-Method-Override': 'DELETE'
+                },
+                success: function() {
+                    // alert(rno_val + '번 댓글 삭제 성공');
+                    getAllReplies();
+                },
+                error: function(e) {
+                    // alert(rno_val + '댓글 삭제 실패');
+                }
+
+            })
+        } else {
+            return;
+        }
+
+        
+
+    });
+
+    
+
 
 });
 
+//댓글 추가
 function insertreplie() {
     var mno_val = $('#mno').val();
     var content_val = $('#content').val();
@@ -43,27 +75,41 @@ function insertreplie() {
 // 댓글 목록 조회
 function getAllReplies() {
     var mno_val = $('#mno').val();
+    var name_val = $('#login_name').val();
     $.getJSON('/movidic/replies/all/' + mno_val, function(response){
-        // alert('getAllReplies 통신 성공');
+        //alert('getAllReplies 통신 성공');
         // console.log('getAllReplies 통신 성공');
+        
         var list = '';
 
         $(response).each(function() {
             list += '<div class="anime__review__item">'
             + '<div class="anime__review__item__text">'
+            + '<div class="anime_review_item__div_section">'
             + '<h6>'
             + this.writer
             + ' - <span>'
             + timeForToday(this.regdate)
             + '</span>'
             + '</h6>'
-            + '<p>'
+            + '<input type="hidden"  id="rno" name="rno" value="'
+            + this.rno
+            + '"/>';
+
+            if(this.writer == name_val) {
+                list += '<button class="reply_delete">삭제</button>';
+            };
+
+            list += '</div><p>'
             + this.content
             + '</p>'
             + '</div>'
             + '</div>';
-            $('#replies').html(list);
+            
+            
+
         });
+        $('#replies').html(list);
 
         
 

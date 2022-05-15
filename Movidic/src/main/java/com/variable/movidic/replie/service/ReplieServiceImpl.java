@@ -36,4 +36,11 @@ public class ReplieServiceImpl implements ReplieService {
 		return replieVO;
 	}
 
+	@Override
+	public int deleteReplie(int mno) {
+		
+		
+		return replieMapper.deleteReplie(mno);
+	}
+
 }

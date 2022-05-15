@@ -10,4 +10,6 @@ public interface ReplieService {
 
 	List<ReplieVO> read(Integer mno);
 
+	int deleteReplie(int mno);
+
 }
