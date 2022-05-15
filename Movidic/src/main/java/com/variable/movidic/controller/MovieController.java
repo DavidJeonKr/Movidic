@@ -56,9 +56,11 @@ public class MovieController {
 		CountVO count = movieService.getCount(mno);
 //		logger.info("MovieController => count : {}", count.toString());
 		
-		Map<String, Object> rating = (HashMap<String, Object>) movieService.avgRating(mno); 
+		Map<String, Integer> rating = movieService.avgRating(mno); 
 		logger.info("{}",rating.get("rating"));
 		logger.info("{}",rating.get("count"));
+		
+		
 		//logger.info(movie.toString());
 //		logger.info(count.toString());
 		model.addAttribute("movie", movie);

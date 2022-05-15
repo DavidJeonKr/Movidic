@@ -92,9 +92,9 @@ public class MovieServiceImpl implements MovieService{
 	}
 	// 평점 평균 / 카운트 조회
 	@Override
-	public Map<String, Object> avgRating(int mno) {
+	public Map<String, Integer> avgRating(int mno) {
 		
-		Map<String, Object> map = (HashMap<String, Object>) movieMapper.avgRating(mno);
+		Map<String, Integer> map = movieMapper.avgRating(mno);
 		
 		return map;
 	}

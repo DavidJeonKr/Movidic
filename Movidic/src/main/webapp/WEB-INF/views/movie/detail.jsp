@@ -32,8 +32,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb__links">
-						<a href="./index.html"><i class="fa fa-home"></i> Home</a> <a
-							href="./categories.html">Categories</a> <span>${movie.genre}</span>
+						<a href="../"><i class="fa fa-home"></i> Home</a> <a
+							href="./category">Categories</a> <span>${movie.genre}</span>
 					</div>
 				</div>
 			</div>
@@ -62,15 +62,49 @@
 							<div class="anime__details__title">
 								<h3>${movie.title}</h3>
 							</div>
-							<div class="anime__details__rating">
+							<!-- 평점 -->
+<%-- 							<div class="anime__details__rating">
 								<div class="rating">
 									<a href="#"><i class="fa fa-star"></i></a> <a href="#"><i
 										class="fa fa-star"></i></a> <a href="#"><i class="fa fa-star"></i></a>
 									<a href="#"><i class="fa fa-star"></i></a> <a href="#"><i
 										class="fa fa-star-half-o"></i></a>
 								</div>
+								
 								<span>${rating.count} Votes</span>
-							</div>
+							</div> --%>
+							<div class="anime__details__rating">
+								<div class="rating">
+ 									<c:if test="${rating.count == 0}">
+										<i class="fa fa-star-half"></i>
+									</c:if>
+									
+									<c:if test="${rating.rating >=0 and rating.rating< 0.75}">
+										<i class="fa fa-star-half"></i>
+									</c:if>
+									<c:if test="${0.75 <= rating.rating and rating.rating <= 1.25  }"><i class="fa fa-star"></i></c:if>
+									
+									<c:if test="${rating.rating > 1.25 and rating.rating< 1.75}">
+										<i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+									</c:if>
+									<c:if test="${1.75 <= rating.rating and rating.rating <= 2.25  }"><i class="fa fa-star"></i><i class="fa fa-star"></i></c:if>
+									
+									<c:if test="${rating.rating > 2.25 and rating.rating< 3.75}">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+									</c:if>
+									<c:if test="${3.75 <= rating.rating and rating.rating <= 4.25  }"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></c:if>
+									
+									<c:if test="${rating.rating > 4.25 and rating.rating< 4.90}">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+									</c:if>
+									<c:if test="${4.90 <= rating.rating and rating.rating <= 5.01  }">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									</c:if>
+								</div>
+								
+								<span>${rating.count} Votes</span>
+							</div>							
+							
 							<p>${movie.summary}</p>
 							<div class="anime__details__widget">
 								<div class="row">

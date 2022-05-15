@@ -24,6 +24,6 @@ public interface MovieService {
 	List<MovieVO> getRecentReplie();
 	// 평점 삽입
 	int insertRating(RatingVO ratingVO);
-	Map<String, Object> avgRating(int mno);
+	Map<String, Integer> avgRating(int mno);
 	RatingVO checkRating(RatingVO ratingVO);
  }

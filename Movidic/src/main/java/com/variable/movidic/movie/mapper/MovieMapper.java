@@ -3,6 +3,7 @@ package com.variable.movidic.movie.mapper;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.variable.movidic.domain.CountVO;
 import com.variable.movidic.domain.MovieVO;
@@ -27,7 +28,7 @@ public interface MovieMapper {
 	//평점 추가
 	int insertRating(RatingVO ratingVO);
 	//
-	HashMap<String, Object> avgRating(int mno);
+	Map<String, Integer> avgRating(int mno);
 	RatingVO checkRating(RatingVO ratingVO);
 	
 	
