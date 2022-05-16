@@ -45,6 +45,14 @@ public class MovieController {
 		return "movie/category";
 	}
 	
+	@RequestMapping(value="/watch", method=RequestMethod.GET)
+	public String watch(@RequestParam int mno, Model model) {
+		
+		MovieVO movie=movieService.read(mno);
+		model.addAttribute("movie", movie);
+		return "movie/watch";
+	}
+	
 	// Detail 페이지 get method
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detailPage(@RequestParam int mno, Model model) {

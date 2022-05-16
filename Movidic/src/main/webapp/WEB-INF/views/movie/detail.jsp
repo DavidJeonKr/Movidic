@@ -63,7 +63,7 @@
 								<h3>${movie.title}</h3>
 							</div>
 							<!-- 평점 -->
-<%-- 							<div class="anime__details__rating">
+							<%-- 							<div class="anime__details__rating">
 								<div class="rating">
 									<a href="#"><i class="fa fa-star"></i></a> <a href="#"><i
 										class="fa fa-star"></i></a> <a href="#"><i class="fa fa-star"></i></a>
@@ -75,36 +75,60 @@
 							</div> --%>
 							<div class="anime__details__rating">
 								<div class="rating">
- 									<c:if test="${rating.count == 0}">
+									<c:if test="${rating.count == 0}">
 										<i class="fa fa-star-half"></i>
 									</c:if>
-									
+
 									<c:if test="${rating.rating >=0 and rating.rating< 0.75}">
 										<i class="fa fa-star-half"></i>
 									</c:if>
-									<c:if test="${0.75 <= rating.rating and rating.rating <= 1.25  }"><i class="fa fa-star"></i></c:if>
-									
+									<c:if
+										test="${0.75 <= rating.rating and rating.rating <= 1.25  }">
+										<i class="fa fa-star"></i>
+									</c:if>
+
 									<c:if test="${rating.rating > 1.25 and rating.rating< 1.75}">
-										<i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half"></i>
 									</c:if>
-									<c:if test="${1.75 <= rating.rating and rating.rating <= 2.25  }"><i class="fa fa-star"></i><i class="fa fa-star"></i></c:if>
-									
+									<c:if
+										test="${1.75 <= rating.rating and rating.rating <= 2.25  }">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</c:if>
+
 									<c:if test="${rating.rating > 2.25 and rating.rating< 3.75}">
-										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half"></i>
 									</c:if>
-									<c:if test="${3.75 <= rating.rating and rating.rating <= 4.25  }"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></c:if>
-									
+									<c:if
+										test="${3.75 <= rating.rating and rating.rating <= 4.25  }">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</c:if>
+
 									<c:if test="${rating.rating > 4.25 and rating.rating< 4.90}">
-										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-half"></i>
 									</c:if>
-									<c:if test="${4.90 <= rating.rating and rating.rating <= 5.01  }">
-										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									<c:if
+										test="${4.90 <= rating.rating and rating.rating <= 5.01  }">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
 									</c:if>
 								</div>
-								
+
 								<span>${rating.count} Votes</span>
-							</div>							
-							
+							</div>
+
 							<p>${movie.summary}</p>
 							<div class="anime__details__widget">
 								<div class="row">
@@ -120,7 +144,8 @@
 											<fmt:formatDate value="${movie.openData}"
 												pattern="yyyy/MM/dd" var="opendate" />
 											<li><span>개봉일:</span> ${opendate}</li>
-											<li><span>평점:</span> ${rating.rating} / ${rating.count} Votes </li>
+											<li><span>평점:</span> ${rating.rating} / ${rating.count}
+												Votes</li>
 											<li><span>조회수:</span> ${count.view_cnt} views</li>
 										</ul>
 									</div>
@@ -130,7 +155,7 @@
 								<button class="follow-btn" onclick="gradeBtn()">
 									<i class="fa fa-star-o"></i>평점주기
 								</button>
-								<a href="#" class="watch-btn"><span>시청하기</span></a>
+								<a href="watch?mno=${movie.mno }" class="watch-btn"><span>시청하기</span></a>
 							</div>
 						</div>
 					</div>
@@ -153,8 +178,8 @@
 						<%--  <c:if test="${not empty login }"> --%>
 						<div>
 							<input id="mno" type="hidden" value="${movie.mno}"> <input
-								id="login_name" type="hidden" value="${login.name}">
-							<input id="login_email" type="hidden" value="${login.email}"/>
+								id="login_name" type="hidden" value="${login.name}"> <input
+								id="login_email" type="hidden" value="${login.email}" />
 							<textarea id="content" placeholder="Your Comment"></textarea>
 							<button type="submit" id="submit">
 								<i class="fa fa-location-arrow"></i> Review
@@ -206,25 +231,25 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<span class="star-input">
-	<span class="input">
-    	<input type="radio" name="star-input" value="1" id="p1">
-    	<label for="p1">1</label>
-    	<input type="radio" name="star-input" value="2" id="p2">
-    	<label for="p2">2</label>
-    	<input type="radio" name="star-input" value="3" id="p3">
-    	<label for="p3">3</label>
-    	<input type="radio" name="star-input" value="4" id="p4">
-    	<label for="p4">4</label>
-    	<input type="radio" name="star-input" value="5" id="p5">
-    	<label for="p5">5</label>
-  	</span>
-  	<output for="star-input"><b>0</b>점</output>						
-</span>
+					<span class="star-input"> <span class="input"> <input
+							type="radio" name="star-input" value="1" id="p1"> <label
+							for="p1">1</label> <input type="radio" name="star-input"
+							value="2" id="p2"> <label for="p2">2</label> <input
+							type="radio" name="star-input" value="3" id="p3"> <label
+							for="p3">3</label> <input type="radio" name="star-input"
+							value="4" id="p4"> <label for="p4">4</label> <input
+							type="radio" name="star-input" value="5" id="p5"> <label
+							for="p5">5</label>
+					</span> <output for="star-input">
+							<b>0</b>점
+						</output>
+					</span>
 				</div>
 				<div class="modal-footer">
-					<button id= "saveBtn" type="button" class="btn btn-primary">Save changes</button>
-					<button type="button" class="btn btn-secondary"	data-dismiss="modal" onclick="modalClose()">Close</button>
+					<button id="saveBtn" type="button" class="btn btn-primary">Save
+						changes</button>
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal" onclick="modalClose()">Close</button>
 				</div>
 			</div>
 		</div>
@@ -239,7 +264,8 @@
 	src="${pageContext.request.contextPath }/resources/js/category.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/replies.js?version=02"></script>
-<script src="${pageContext.request.contextPath }/resources/js/modal.js?version=02"></script>
+<script
+	src="${pageContext.request.contextPath }/resources/js/modal.js?version=02"></script>
 
 
 
