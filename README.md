@@ -24,7 +24,8 @@
 
 ## 서비스 구조
 
-![service](https://user-images.githubusercontent.com/93497987/168541657-808a5f7c-494c-4e50-8a04-a8e3d0438556.jpg)
+![service](https://user-images.githubusercontent.com/93497987/168542386-f81daff4-43b0-4153-bf6c-ebe9b216ba45.jpg)
+
 
 
 ## 기술 스택
