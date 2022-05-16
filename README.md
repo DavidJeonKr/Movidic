@@ -23,8 +23,9 @@
 - **DB** : AWS MySQL에 미리 크롤링한 영화 데이터(Movie)와 새로 생기는 데이터 저장
 
 ## 서비스 구조
-![서비스구조](https://user-images.githubusercontent.com/77563814/134013439-f36295cc-39c0-41e7-86b6-19e6a02183c6.jpg)
-![서비스구조]()
+
+![service](https://user-images.githubusercontent.com/93497987/168541657-808a5f7c-494c-4e50-8a04-a8e3d0438556.jpg)
+
 
 ## 기술 스택
 
@@ -50,4 +51,4 @@
 [DB 명세서](https://inky-krypton-cd8.notion.site/DB-72f71aabc6b04ce29ab19ccf74e90dfe)
 
 ## Git Projects(프로젝트 스케줄 보드)
-![프로젝트 스케줄 보드]()
+![화면 캡처 2022-05-16 142438](https://user-images.githubusercontent.com/93497987/168541724-7f21d1e9-b533-44b2-bc54-950c57899334.png)
