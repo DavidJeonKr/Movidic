@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.variable.movidic.movie.mapper.MovieMapper">
+    
+    <select id="getRankData" resultType="MovieVO">
+    	select * from movies order by moviesRank  limit 6 
+    </select>
+    
+    <select id="getLatelyData" resultType="MovieVO">
+    	select * from movies order by opendata desc limit 6
+    </select>
+    
+    <select id="getCategoryData" resultType="MovieVO">
+    select * from 
+	(select @rownum:=@rownum+1 as rn, m.* 
+		from (select * from movies where 1=1 and genre like concat ('%', #{genreName}, '%')
+		  order by mno) m
+          where (@rownum:=0)=0) a 
+        <![CDATA[
+        where rn >(#{pageNum}-1) * #{amount} and rn<= #{pageNum}*#{amount} 
+    	]]>
+    </select>
+    
+    <select id="getTotal" resultType="int">
+    	select count(*) as total
+    	from movies
+    	where genre like concat('%',#{genreName},'%')
+    
+    </select>
+
+    <select id="read" resultType="MovieVO">
+    	select * from movies where mno = #{mno}
+    	
+    </select>
+    
+    <select id="getSidebarData" resultType="MovieVO">
+    	select * from movies order by views limit 5
+    </select>
+    
+    <!-- 조회 수 증가 -->
+    <update id="updateHitCnt" >
+    	update movies set views = views + 1 where mno = #{mno};
+    </update>
+    
+    
+    <!-- 조회 수 댓글 수 -->
+    <select id="getCount" resultType="CountVO">
+	select m.views as view_cnt, count(r.mno) as replie_cnt
+	from movies as m left join replies as r on m.mno = r.mno
+	where m.mno = #{mno};
+    </select>
+    
+    <!-- 최근 댓글 영화 목록 조회-->
+    
+    <select id="getRecentReplie" resultType="MovieVO">
+		select movies.mno, movies.title, movies.genre, movies.views,
+		movies.image
+		from replies
+		right join movies on replies.mno = movies.mno
+		group by movies.title
+		order by regdate desc
+		limit 4
+    </select>
+    
+    <!-- 평점 추가 -->
+    <insert id="insertRating">
+    	insert into rating(mno, rating, email) values(#{mno}, #{rating}, #{email})
+    </insert>
+    
+    <!-- 평점 조회 -->
+    <select id="avgRating" parameterType="int" resultType="hashmap">
+    	select avg(rating) as rating, count(rating) as count
+    	from rating
+    	where mno = #{mno}
+    </select>
+    
+    <!-- 평점 준 회원 조회 -->
+    
+    <select id="checkRating" resultType="RatingVO">
+    	select * from rating where email = #{email} and mno = #{mno}
+    </select>
+    
+
+   
+  	</mapper>
