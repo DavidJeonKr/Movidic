@@ -4,8 +4,7 @@
 
 ## 시연
 
-[![미리보기](https://img.youtube.com/vi/J3kUYFFdVc0/0.jpg)](https://www.youtube.com/embed/4R1O0B0jTRw)
-
+[![미리보기](https://user-images.githubusercontent.com/93497987/168733189-e1db073f-fe5b-4adf-8acb-a5896c6c5278.png)](https://www.youtube.com/embed/4R1O0B0jTRw)
 
 ## 개발 인원 (2명)
 - 전영호
