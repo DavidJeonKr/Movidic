@@ -3,7 +3,8 @@
 ‼ Idea : 사용자가 원하는 간단하고 쉽게 영화 평점별로 보기 쉽게 보는 사이트를 만들어보까?
 
 ## 시연
-<iframe width="640" height="360" src="https://www.youtube.com/embed/6Az2cNU7gUw" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+
+[![미리보기](https://img.youtube.com/vi/J3kUYFFdVc0/0.jpg)](https://www.youtube.com/embed/4R1O0B0jTRw)
 
 
 ## 개발 인원 (2명)
