@@ -2,7 +2,7 @@
 
 ‼ Idea : 사용자가 원하는 간단하고 쉽게 영화 평점별로 보기 쉽게 보는 사이트를 만들어보까?
 
-## 시연
+## 시연 ( 클릭 시 동영상 재생 )
 
 [![미리보기](https://user-images.githubusercontent.com/93497987/168733189-e1db073f-fe5b-4adf-8acb-a5896c6c5278.png)](https://www.youtube.com/embed/4R1O0B0jTRw)
 
